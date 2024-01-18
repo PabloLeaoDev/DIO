@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM</title>
+</head>
+<body>
+    <h1>Testano a Unidade de Medida EM</h1>
+    <p style="font-size: 1em;">
+        Por padrão <code>1em = 16px</code>
+    </p>
+    <p style="font-size: 2em;">
+        <code>2em = 32px</code>
+    </p>
+    <p style="font-size: 3em;">
+        <code>3em = 48px</code>
+    </p>
+    <h2>EM é relativo à tag 'pai'</h2>
+    <div style="font-size: 20px; background: red; padding: 10px;">
+        <code>1em = 20px</code>
+        <div style="font-size: 2em; background: green; padding: 10px;">
+            <code>2em = 40px</code>
+            <div style="font-size: 2em; background: blue;">
+                <code>2em = 80px</code>
+            </div>
+        </div>
+    </div>
+    <p>Obs: o EM sempre é relativo ao tamanho em <code>pixels</code> da propriedade '<code>font-size:</code>' do elemento (quando o valor é colocado em EM na propriedade <code>'font-size',</code> pega-se a referência em <code>pixels</code> do elemento pai, mas se tratando de outra propriedade utilizando essa uni. de medida, o valor de referência é do próprio elemento); o EM pode ser aplicado em outras propriedades também.</p>
+</body>
+</html>

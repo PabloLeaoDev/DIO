@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REM</title>
+</head>
+<body>
+    <h1>Testano a Unidade de Medida REM</h1>
+    <p style="font-size: 1rem;">
+        Por padrão <code>1rem = 16px</code>
+    </p>
+    <p style="font-size: 2rem;">
+        <code>2rrem = 32px</code>
+    </p>
+    <p style="font-size: 3rem;">
+        <code>3rem = 48px</code>
+    </p>
+    <h2>REM é relativo à tag &lt;html&gt;</h2>
+    <div style="font-size: 20px; background: red; padding: 10px;">
+        <code>font-size = 20px</code>
+        <div style="font-size: 2rem; background: green; padding: 10px;">
+            <code>2rem = 32px</code>
+            <div style="font-size: 3rem; background: blue;">
+                <code>3rem = 64px</code>
+            </div>
+        </div>
+    </div>
+    <p>Obs: o REM sempre é relativo a tag raíz (root), ou seja, &lt;html&gt; que por padrão é 16px</p>
+</body>
+</html>

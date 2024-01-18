@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url('global.css');
+
+img {
+    width: 500px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+img + p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p + p {
+    font-variant: small-caps;
+}

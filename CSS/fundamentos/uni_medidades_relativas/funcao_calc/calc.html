@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Calc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 10px;
+        }
+
+        #pai {
+            height: 100px; 
+            width: 500px; 
+            border: 5px solid black;
+            margin: 10px;
+        }
+
+        #filho {
+            background: blue;
+            color: white;
+            width: calc(100% - 20vh);
+            height: calc(50vmin - 300px);
+        }
+
+        p {
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Testando a função <code>calc()</code></h1>
+    <div id="pai">
+        <div id="filho">
+            TESTE
+        </div>
+    </div>
+
+    <p>
+        Obs: <br> com essa função é possível fazer qualquer cálculo com quaisquer unidade de medida, seja ela relativa ao absoluta.
+    </p>
+</body>
+</html>

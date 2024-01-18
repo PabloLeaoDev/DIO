@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas Viewport</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 10px;
+        }
+
+        div {
+            height: 100px; 
+            width: 500px; 
+            border: 5px solid black;
+            margin: 10px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .w {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .one {
+            background: red;
+            width: 50%;
+        }
+
+        .two {
+            background: green;
+            width: 50vw;
+        }
+
+        .three {
+            background: blue;
+            width: 50vh;
+        }
+
+        .four {
+            color: black;
+            background: yellow;
+            width: 30vmin;
+        }
+
+        .five {
+            color: black;
+            background: orange;
+            width: 30vmax;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando vh, mw, vmin e vmax</h1>
+    <div>
+        <p class="w one">width: 50%</p>
+        <p class="w two">width: 50vw</p>
+        <p class="w three">width: 50vh</p>
+    </div>
+
+    <p class="w four">30vmin</p>
+    <p class="w five">30vmax</p>
+
+    <br>
+
+    <p>
+        Obs: <br> o vw (viewport-width) é relativo a largura da viewport; <br> o vh (viewport-heigth) é relativo a altura da viewport; <br> o vmin é relativo a menor dimensão da viewport, seja ela altura ou largura; <br> o vmax é relativo a maior dimensão da viewport, seja ela altura ou largura.
+    </p>
+</body>
+</html>
