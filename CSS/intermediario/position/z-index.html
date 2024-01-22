@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .exemplo {
+            width: 100px;
+            height: 100px;
+
+            border-radius: 4px;
+            margin: 10px;
+            padding: 5px;
+
+            position: absolute;
+            opacity: .7;
+        }
+
+        #exemplo-1 {
+            background: lightcoral;
+            left: 10px;
+            top: 10px;
+            z-index: 5;
+        }
+
+        #exemplo-2 {
+            background: lightgreen;
+            left: 20px;
+            top: 20px;
+            z-index: 4;
+        }
+
+        #exemplo-3 {
+            background: lightblue;
+            left: 30px;
+            top: 30px;
+            z-index: 3;
+        }
+
+        #exemplo-4 {
+            background: orange;
+            left: 40px;
+            top: 40px;
+            z-index: 2;
+        }
+
+        #exemplo-5 {
+            background: greenyellow;
+            left: 50px;
+            top: 50px;
+            z-index: 1;
+        }
+
+        #exemplo-6 {
+            background: blueviolet;
+            left: 60px;
+            top: 60px;
+            z-index: 0;
+        }
+
+        #explain {
+            position: relative;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="exemplo-1" class="exemplo">Exemplo 01</div>
+    <div id="exemplo-2" class="exemplo">Exemplo 02</div>
+    <div id="exemplo-3" class="exemplo">Exemplo 03</div>
+    <div id="exemplo-4" class="exemplo">Exemplo 4</div>
+    <div id="exemplo-5" class="exemplo">Exemplo 5</div>
+    <div id="exemplo-6" class="exemplo">Exemplo 6</div>
+    <p id="explain">ACIMA <code>Z-INDEX</code> FOI UTILIZADO PARA INVERTER A ORDEM DAS CAMADAS. <br><br> A propriedade <code>z-index</code> tem seus valores ordenados começando por 0, que é o valor padrão. Com ele altera-se o <i>eixo Z</i>, que se trata da profundidade. Em outras palavras, essa propriedade ficará responsável por organizar as camadas dos elementos da página. <strong>Importante:</strong> o <code>z-index</code> não funciona em elementos com <code>position: static</code>.</p>
+</html>

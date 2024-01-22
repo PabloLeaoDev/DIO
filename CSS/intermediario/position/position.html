@@ -41,6 +41,83 @@
         #exemplo-c {
             background: blueviolet;
         }
+
+        #exemplo-04 {
+            background: lightcoral;
+        }
+
+        #exemplo-05 {
+            background: lightgreen;
+
+            position: relative;
+            top: 5px;
+            right: 40px;
+        }
+
+        #exemplo-06 {
+            background: lightblue;
+            position: relative;
+            top: 10px;
+            right: 80px;
+        }
+
+        #exemplo-d {
+            background: orange;
+        }
+
+        #exemplo-f {
+            background: greenyellow;
+
+            position: relative;
+            bottom: 80px;
+            left: 30px;
+        }
+
+        #exemplo-g {
+            background: blueviolet;
+
+            position: relative;
+            bottom: 160px;
+            left: 60px;
+        }
+
+        #ironic {
+            position: absolute;
+            top: 1240px;
+        }
+
+        .elemento-pai {
+            width: 80%;
+            height: 300px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        #elemento-filho {
+            background: aqua;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #fixed {
+            background: firebrick;
+            color: white;
+
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+
+            position: sticky;
+            top: 0px;
+            left: 230px;
+            
+            width: 50%;
+            height: 3rem;
+
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -53,7 +130,7 @@
         <li><code>position: fixed;</code></li>
         <li><code>position: relative;</code></li>
     </ul>
-    <h3>Exemplos <code>position: static;</code>:</h3>
+    <h3>Exemplos <code>position: static</code>:</h3>
     <div id="exemplo-01" class="exemplo inline">Exemplo 01</div>
     <div id="exemplo-02" class="exemplo inline">Exemplo 02</div>
     <div id="exemplo-03" class="exemplo inline">Exemplo 03</div>
@@ -61,7 +138,9 @@
     <div id="exemplo-a" class="exemplo">Exemplo A</div>
     <div id="exemplo-b" class="exemplo">Exemplo B</div>
     <div id="exemplo-c" class="exemplo">Exemplo C</div>
-    <h3>Exemplos <code>position: relative;</code>:</h3>
+    <p>O <code>static</code> é o valor padrão da propriedade position.</p>
+
+    <h3>Exemplos <code>position: relative</code>:</h3>
     <div id="exemplo-04" class="exemplo inline">Exemplo 04</div>
     <div id="exemplo-05" class="exemplo inline">Exemplo 05</div>
     <div id="exemplo-06" class="exemplo inline">Exemplo 06</div>
@@ -69,5 +148,25 @@
     <div id="exemplo-d" class="exemplo">Exemplo D</div>
     <div id="exemplo-f" class="exemplo">Exemplo F</div>
     <div id="exemplo-g" class="exemplo">Exemplo G</div>
+    <p id="ironic">O <code>relative</code> é um valor da propriedade position que permite manipular a posição do elemento com relação a posição padrão dele, através as propriedades <code>top</code>, <code>bottom</code>, <code>left</code> e <code>right</code>. Vale salientar que a posição original dele mantêm inalterada, ou seja, nenhum outro elemento tomará o seu lugar de origem.</p>
+
+    <h3>Exemplo <code>position: absolute</code>:</h3>
+    <div class="elemento-pai">
+        <div id="elemento-filho" class="exemplo">Exemplo 05</div>
+    </div>
+    <p>O <code>absolute</code> é um valor da propriedade position que permite manipular a posição do elemento com relação a página html, através as propriedades <code>top</code>, <code>bottom</code>, <code>left</code> e <code>right</code>. Diferentemente do valor <code>relative</code>, o <code>absolute</code> fica acima da página, como se ele não fizesse mais parte da mesma, dessa forma, os outros elementos tomam o espaço que outrora era originalmente dele. <b>Importante:</b> quando o <em>container</em> "pai" de um elemento com <code>position: absolute</code> está com o <code>position: relative</code> ou <code>absolute</code> também, o elemento "filho" se submete à ele, não mais à página.</p>
+
+    <h3>Exemplos <code>position: sticky</code> e <code>fixed</code>:</h3>
+    <div id="fixed">Pegajoso</div>
+    <p id="ironic-1">O <code>position: sticky</code> funciona como uma junção entre os valores <code>relative</code> e <code>fixed</code>. Inicialmente o elementose comportará como <i>relativo</i>, mas assim que a página for rolada para baixo e o topo dela tocar no elemento, ele ficará grudado nela e se comportára como um elemento <em>fixo</em>. Mesmo quando o <i>sticky</i> está se comportando como <i>fixed</i>, o espaço original dele comtinua inalterado, devido a sua semelhança com o <em>relative. O valor <i>fixed</i> padrão delega seu espaço original, análogo ao <em>absolute.</em></em></p>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
