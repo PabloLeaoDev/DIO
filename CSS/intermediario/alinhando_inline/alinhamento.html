@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+        .container {
+            display: inline-block;
+            width: 100%;
+            height: 100px;
+            border: 5px solid black;
+            text-align: center;
+        }
+
+        #ball {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .item {
+            display: inline-block;
+        }
+
+        .one {
+            vertical-align: bottom;
+        }
+
+        .two {
+            vertical-align: middle;
+        }
+
+        .three {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhando elementos <code>inline</code></h1>
+    <div class="container">
+        <div id="ball"></div>
+        <span class="item one">Item 1</span>
+        <span class="item two">Item 2</span>
+        <span class="item three">Item 3</span>
+    </div>
+<!-- 
+Para .one, configuramos vertical-align: bottom;, que alinha o elemento na parte inferior da linha de base.
+Para .two, configuramos vertical-align: middle;, que alinha o elemento no meio da linha de base.
+Para .three, configuramos vertical-align: top;, que alinha o elemento no topo da linha de base.
+Essas modificações são feitas para garantir que os elementos se alinhem corretamente verticalmente em relação ao elemento #ball e ao .container.
+
+O vertical-align é uma propriedade que pode ser sensível ao contexto, e em casos específicos, pode ser necessário ajustar outras propriedades para obter o resultado desejado. A combinação de font-size no .container e ajustes do vertical-align nas classes dos itens resolveu a questão neste caso específico -->
+</body>
+</html>

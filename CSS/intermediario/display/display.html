@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .elementos {
+            background-color: coral;
+        }
+
+        .inline {
+            width: 300px;
+            height: 300px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        nav ul {
+            background: cadetblue;
+        }
+
+        nav ul li {
+            display: inline-block;
+
+            width: 100px;
+            height: 30px;
+            padding: 10px 45px;
+        }
+
+        .sumir-elemento {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .sumir-elemento:hover {
+            opacity: 0;
+            transition-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade <code>display: block</code></h1>
+    <p>Obs: as tags já possuem um display padrão</p>
+    <div class="elementos">Elemento 1 (div)</div>
+    <p class="elementos">Elemento 2 (p)</p>
+    <span class="elementos">Elemento 3 (span)</span>
+    <span class="elementos">Elemento 4 (span)</span>
+    <span class="elementos" style="display: block;">Elemento 5 (span com <code>display: block</code> no <em>style</em>)</span>
+    <br>
+    <div class="elementos" style="width: 500px;">
+        Pai
+        <div style="background: blue; color: white;">
+            Filho
+        </div>
+    </div>
+    <br>
+    <h3 style="font-weight: normal;">O <code><strong>display: block</strong></code> faz com que o container ocupe toda a largura da tag "pai".</h3>
+
+    <h1>Propriedade <code>display: inline</code></h1>
+    <span class="elementos inline">Elemento 1</span>
+    <em class="elementos inline">Elemento 2</em>
+    <b class="elementos inline">Elemento 3</b>
+    <p>Lorem ipsum <b style="margin: 20px;">dolor sit amet</b> consectetur adipisicing elit. Laudantium, sunt! Eaque ex totam optio tempora labore ab harum voluptate. Distinctio inventore soluta nesciunt dolorem libero! Ad numquam dolores facere excepturi.</p>
+    <h3 style="font-weight: normal;">O <code><strong>display: inline</strong></code>, como o nome diz, fica ordenado em linha (horizontalmente), ao contrário do <code><strong>display: block</strong></code>, o qual fica ordenado em coluna (verticalmente). Um aspecto importante dessa propriedade que vale destacar é o fato do <i>width</i> e <em>height</em> não se aplicarem a ele, já o <em>padding</em> e o <i>margin</i> se aplicam, mas somente no eixo X (horizontal).</h3>
+
+    <h1>Propriedade <code>display: inline-block</code></h1>
+    <div class="elementos inline-block">Elemento 1</div>
+    <div class="elementos inline-block">Elemento 2</div>
+    <div class="elementos inline-block">Elemento 3</div>
+    <h2>Menu nav</h2>
+    <nav>
+        <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </nav>
+    <h3 style="font-weight: normal;">O <code><strong>display: inline-block</strong></code> combina as características do <code><strong>display: block</strong></code> e do <code><strong>display: inline</strong></code>, já que ele é tão personalizável quanto o <i>block</i> mas mantêm-se ordenado em linha como o <em>inline</em>.</h3>
+
+    <h1>Propriedade <code>display: none</code></h1>
+    <div class="elementos sumir-elemento">PASSE O MAUSE POR MIM PARA ATIVAR O <code>DISPLAY: NONE</code></div>
+    <h3 style="font-weight: normal;">O <code><strong>display: none</strong></code> faz todo o <i>container</i> 'pai' e seus 'filhos' sumirem, mas a tag continua existindo no código-fonte.</h3>
+
+    <h2 style="font-weight: normal;">A propriedade <code><strong>display: none</strong></code> é similar a outra propriedade chamada <code><strong>visibility: hidden</strong></code>, contudo a primeira tem como função eliminar qualquer rastro de um elemento, já a segunda torna o elemento invisível mas conserva o espaço que ele ocupa/ocupou.</h2>
+</body>
+</html>
