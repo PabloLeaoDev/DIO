@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self</title>
+    <style>
+        .container {
+            background: lightgreen;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .item {
+            background: pink;
+            padding: 5px;
+            flex: 1;
+        }
+        
+        #container-01 {
+            flex-flow: row wrap; 
+        }
+
+        #container-02 {
+            flex-flow: column nowrap;
+        }
+
+        .one {
+            width: 50px;
+            height: 50px;
+        }
+
+        .two {
+            width: 70px;
+            height: 70px;
+
+            align-self: flex-end;
+        }
+
+        .three {
+            width: 30px;
+            height: 30;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container-01">
+        <div class="item one">Item 1</div>
+        <div class="item two">Item 2</div>
+        <div class="item three">Item 3</div>
+    </div>
+    <div class="container" id="container-02">
+        <div class="item one">Item 1</div>
+        <div class="item two">Item 2</div>
+        <div class="item three">Item 3</div>
+    </div>
+
+    <p>A propriedade <code>align-self</code> é semelhante a <code>align-items</code>, com uma única diferença, ela alinha o item flexível no eixo transversal (column ou row), aplicando seu valor a somente 1 item de cada vez. Assim sendo, ela sobrepõe a valor da propriedade <code>align-items</code> para aquele elemento em específico.</p>
+    <p>Principais valores:</p>
+    <ul>
+        <li>flex-start</li>
+        <li>center</li>
+        <li>flex-end</li>
+        <li>stretch (standart)</li>
+        <li>baseline</li>
+    </ul>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flex-shrink</title>
+    <title>flex shorthand</title>
     <style>
         .container {
             background: blueviolet;
@@ -27,18 +27,15 @@
 
         .item {
             background: yellow;
-            flex-shrink: 1;
+            flex: 1; /* ou flex: 1 1 0 */
+            /* <grow> <shrink> <basis> */
 
             width: 50px;
             height: 50px;
         }
 
-        .item-03 {
-            flex-shrink: 0;
-        }
-
-        .item-06 {
-            flex-shrink: 2;
+        .item-04 {
+            flex: 2; /* flex: 2 1 0 */
         }
     </style>
 </head>
@@ -62,7 +59,6 @@
         <div class="item item-07">Item 7</div>
     </div>
     <br><br>
-    <p>A propriedade <code>flex-shrink</code> é o contrário da propriedade <code>flex-grow</code>, já que ela faz com que o item <em>flex</em> encolha para caber no <i>container</i> caso os itens o excedam. Além disso, vale ressaltar que tal propriedade pode ser limitada com <code>min-width/max-width/min-height/max-height</code>, ela não aceita valores negativos e ela vem ativada com o valor 1 nos itens flexíveis.</p>
-    <p><strong>IMPORTANTE: </strong>ela funciona somente nos seletores dos itens, não dos <em>container's</em></p>
+    <p>A propriedade <code>flex</code> é o <em>shorthand</em> do <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code>, respectivamente.</p>
 </body>
 </html>

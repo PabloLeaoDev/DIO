@@ -33,12 +33,8 @@
             height: 50px;
         }
 
-        .item-03 {
-            flex-shrink: 0;
-        }
-
-        .item-06 {
-            flex-shrink: 2;
+        .item-04 {
+            flex-basis: 0;
         }
     </style>
 </head>
@@ -62,7 +58,7 @@
         <div class="item item-07">Item 7</div>
     </div>
     <br><br>
-    <p>A propriedade <code>flex-shrink</code> é o contrário da propriedade <code>flex-grow</code>, já que ela faz com que o item <em>flex</em> encolha para caber no <i>container</i> caso os itens o excedam. Além disso, vale ressaltar que tal propriedade pode ser limitada com <code>min-width/max-width/min-height/max-height</code>, ela não aceita valores negativos e ela vem ativada com o valor 1 nos itens flexíveis.</p>
-    <p><strong>IMPORTANTE: </strong>ela funciona somente nos seletores dos itens, não dos <em>container's</em></p>
+    <p>A propriedade <code>flex-basis</code> define um valor inicial para um <i>flex-item</i>. Tal propriedade se submete as propriedades <code>min-width/max-width/min-height/max-height</code>. Além disso, ela funciona no eixo principal e possui duas palavras-chave como valor: <em>auto</em> e <em>content</em>.</p>
+    <p><strong>IMPORTANTE:</strong> ela funciona somente nos seletores dos itens, não dos <em>container's</em></p>
 </body>
 </html>
