@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-shrink</title>
+    <style>
+        .container {
+            background: blueviolet;
+
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+
+            display: flex;
+            gap: 10px;
+        } 
+
+        .co {
+            flex-flow: row nowrap;
+        }
+
+        .ct {
+            flex-flow: column nowrap;
+        }
+
+        .item {
+            background: yellow;
+            flex-shrink: 0;
+
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container co">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+    <div class="container ct">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+    <br><br>
+    <p>A propriedade <code>flex-shrink</code> é o contrário da propriedade <code>flex-grow</code>, já que ela faz com que o item <em>flex</em> encolha para caber no <i>container</i> caso os itens o excedam. Além disso, vale ressaltar que tal propriedade pode ser limitada com <code>min-width/max-width/min-height/max-height</code>, ela não aceita valores negativos e ela vem ativada com o valor <i>1</i> nos itens flexíveis.</p>
+    <p><strong>IMPORTANTE:</strong>ela funciona somente nos seletores dos itens, não dos <em>container's</em></p>
+</body>
+</html>
