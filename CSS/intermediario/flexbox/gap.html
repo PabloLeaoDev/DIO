@@ -14,26 +14,24 @@
             height: 300px;
 
             display: flex;
+            flex-flow: row wrap;
         }
 
         .item {
-            display: flex;
             background: pink;
+
+            width: 40px;
+            height: 40px;
             padding: 5px;
         }
         
         #container-01 {
-            flex-flow: row wrap; 
-            justify-content: space-between;
+
         }
 
         #container-02 {
             flex-direction: column;
-            justify-content: space-around;
-        }
-
-        img {
-            max-width: 900px;
+            gap: 10px 20px
         }
     </style>
 </head>
@@ -42,14 +40,26 @@
         <div class="item">Item 1</div>
         <div class="item">Item 2</div>
         <div class="item">Item 3</div>
+        <div class="item">Item 1.1</div>
+        <div class="item">Item 2.1</div>
+        <div class="item">Item 3.1</div>
+        <div class="item">Item 1.2</div>
+        <div class="item">Item 2.2</div>
+        <div class="item">Item 3.2</div>
     </div>
     <div class="container" id="container-02">
         <div class="item">Item 4</div>
         <div class="item">Item 5</div>
         <div class="item">Item 6</div>
+        <div class="item">Item 4.1</div>
+        <div class="item">Item 5.1</div>
+        <div class="item">Item 6.1</div>
+        <div class="item">Item 4.2</div>
+        <div class="item">Item 5.2</div>
+        <div class="item">Item 6.2</div>
     </div>
 
-    <p>A propriedade <code>justify-content</code> alinha os itens flexíveis no eixo principal (row ou column).</p>
+    <p>A propriedade <code>align-content</code> alinha as linhas ou colunas dos items flexíveis. Para tanto, o <i>container</i> deve ter a propriedade <code>flex-wrap: wrap</code> ou <code>wrap-reverse</code> em seu valor.</p>
     <p>Principais valores:</p>
     <ul>
         <li>flex-start (standart)</li>
@@ -57,9 +67,6 @@
         <li>flex-end</li>
         <li>space-between</li>
         <li>space-araund</li>
-        <li>space-evenly</li>
     </ul>
-    <p>Imagem representativa abaixo:</p>
-    <img src="imagens/justify-content.png" alt="justify-content">
 </body>
 </html>
