@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>justify-content</title>
+    <title>gap</title>
     <style>
         .container {
             background: lightgreen;
@@ -26,12 +26,13 @@
         }
         
         #container-01 {
-
+            column-gap: 10px;
         }
 
         #container-02 {
             flex-direction: column;
-            gap: 10px 20px
+            gap: 10px 20px;
+            /* row and column */
         }
     </style>
 </head>
@@ -59,14 +60,6 @@
         <div class="item">Item 6.2</div>
     </div>
 
-    <p>A propriedade <code>align-content</code> alinha as linhas ou colunas dos items flexíveis. Para tanto, o <i>container</i> deve ter a propriedade <code>flex-wrap: wrap</code> ou <code>wrap-reverse</code> em seu valor.</p>
-    <p>Principais valores:</p>
-    <ul>
-        <li>flex-start (standart)</li>
-        <li>center</li>
-        <li>flex-end</li>
-        <li>space-between</li>
-        <li>space-araund</li>
-    </ul>
+    <p>A propriedade <code>gap</code> é um <em>shorthand</em> que engloba o <code>row-gap</code> e o <code>column-gap</code>. Com ele é criado um espaçamento entre os itens, não aplicando o espaçamento entre um item e o <i>container</i>, essa é a diferença entre o <code>gap</code> e o <code>margin</code>.</p>
 </body>
 </html>

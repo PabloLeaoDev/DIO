@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <style>
+        .container {
+            background: blueviolet;
+            padding: 10px;
+            margin: 10px;
+
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .item {
+            background: yellow;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .first {
+            width: 200px;
+        }
+        
+        #container-01 {
+            gap: 10px;
+        }
+
+        #container-02 {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .item-05 {
+            order: -2;
+        }
+
+        .item-01 {
+            order: 1;
+        }
+
+        .item-03, .item-07 {
+            order: -1;
+        }
+
+        p {
+            text-indent: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container-01">
+        <div class="item item-01 first">Item 1</div>
+        <div class="item item-02 first">Item 2</div>
+        <div class="item item-03 first">Item 3</div>
+        <div class="item item-04 first">Item 4</div>
+        <div class="item item-05 first">Item 5</div>
+        <div class="item item-06 first">Item 6</div>
+        <div class="item item-07 first">Item 7</div>
+        <div class="item item-08 first">Item 8</div>
+        <div class="item item-09 first">Item 9</div>
+        <div class="item item-10 first">Item 10</div>
+    </div>
+    <div class="container" id="container-02">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+        <div class="item item-08">Item 8</div>
+        <div class="item item-09">Item 9</div>
+        <div class="item item-10">Item 10</div>
+    </div>
+    
+    <p>A propriedade <code>order</code> define a ordem de um elemento. Por padrão todos os elementos do <i>container-flex</i> estão com <code>order: 0</code>, portanto, o item que estiver com um valor no <code>order</code> &lt; 0, virá primeiro, e quando estiver &gt; 0, virá depois.</p>
+    <p>Pode-se manipular o valor padrão da propriedade <code>order</code> em um <i>container-flex</i> caso necessário. Além disso, quando algum item estiver com o mesmo valor na propriedade <code>order</code>, eles segirão a sequência do HTML.</p>
+</body>
+</html>
