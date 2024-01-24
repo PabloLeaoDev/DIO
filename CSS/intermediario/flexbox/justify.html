@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <style>
+        .container {
+            background: lightgreen;
+            color: white;
+            margin: 10px;
+
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+        }
+
+        .item {
+            display: flex;
+            background: pink;
+            padding: 5px;
+        }
+        
+        #container-01 {
+            flex-flow: row wrap; 
+            justify-content: space-between;
+        }
+
+        #container-02 {
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container-01">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <div class="container" id="container-02">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    <p>A propriedade <code>justify-content</code> alinha os itens flexíveis no eixo principal (row ou column).</p>
+    <p>Principais valores:</p>
+    <ul>
+        <li>flex-start (standart)</li>
+        <li>center</li>
+        <li>flex-end</li>
+        <li>space-between</li>
+        <li>space-araund</li>
+        <li>space-evenly</li>
+    </ul>
+</body>
+</html>
