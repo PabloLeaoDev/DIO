@@ -27,10 +27,18 @@
 
         .item {
             background: yellow;
-            flex-shrink: 0;
+            flex-shrink: 1;
 
             width: 50px;
             height: 50px;
+        }
+
+        .item-03 {
+            flex-shrink: 0;
+        }
+
+        .item-06 {
+            flex-shrink: 2;
         }
     </style>
 </head>
@@ -54,7 +62,7 @@
         <div class="item item-07">Item 7</div>
     </div>
     <br><br>
-    <p>A propriedade <code>flex-shrink</code> é o contrário da propriedade <code>flex-grow</code>, já que ela faz com que o item <em>flex</em> encolha para caber no <i>container</i> caso os itens o excedam. Além disso, vale ressaltar que tal propriedade pode ser limitada com <code>min-width/max-width/min-height/max-height</code>, ela não aceita valores negativos e ela vem ativada com o valor <i>1</i> nos itens flexíveis.</p>
+    <p>A propriedade <code>flex-shrink</code> é o contrário da propriedade <code>flex-grow</code>, já que ela faz com que o item <em>flex</em> encolha para caber no <i>container</i> caso os itens o excedam. Além disso, vale ressaltar que tal propriedade pode ser limitada com <code>min-width/max-width/min-height/max-height</code>, ela não aceita valores negativos e ela vem ativada com o valor 1 nos itens flexíveis.</p>
     <p><strong>IMPORTANTE:</strong>ela funciona somente nos seletores dos itens, não dos <em>container's</em></p>
 </body>
 </html>
