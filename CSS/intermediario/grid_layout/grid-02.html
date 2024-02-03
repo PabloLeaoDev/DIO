@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+            background: yellow;
+            height: 500px;
+            margin-bottom: 20px;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr; /* unid. de medida especial do grid-layout, fr (fração do container) */
+            grid-template-rows: 2fr 1fr;
+            /* foram definidas 3 colunas, por haver 3 valores */
+        }
+
+        .container-01 {
+            border: 1px solid black;
+            padding: 10px;
+            background: yellow;
+            height: 500px;
+            margin-bottom: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr 2fr) 3fr; /* essa função repetiu o 1fr (1° e 3° coluna, nesse caso) 2fr (2° e 4° coluna, nesse caso) 2 vezes, e depois criei outra coluna com 3fr. E, obviamente, essa função aceita qualquer unid de medida. */
+        }
+
+        .container-02 {
+            border: 1px solid black;
+            padding: 10px;
+            background: yellow;
+            height: 500px;
+            margin-bottom: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr 2fr) 3fr; /* essa função repetiu o 1fr (1° e 3° coluna, nesse caso) 2fr (2° e 4° coluna, nesse caso) 2 vezes, e depois criei outra coluna com 3fr. E, obviamente, essa função aceita qualquer unid de medida. */
+        }
+
+        .container-03 {
+            border: 1px solid black;
+            padding: 10px;
+            background: yellow;
+            height: 500px;
+            margin-bottom: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 100px); /* coloca o máximo de items que ele conseguir em uma mesma linha, alocando os espaços restantes, caso haja */
+        }
+
+        .container-04 {
+            border: 1px solid black;
+            padding: 10px;
+            background: yellow;
+            height: 500px;
+            margin-bottom: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 100px); /* ao contrário do auto-fill, não aloca nenhum espaço extra */
+        }
+
+        /* na propriedade grid-template-columns e grid-template-rows também há as palavras-chave min-content, max-content e auto */
+
+        .item-01 {
+            background: palevioletred;
+            border: 1px solid black;
+        }
+
+        .item-02 {
+            background: cornflowerblue;
+            border: 1px solid black;
+        }
+
+        .item-03 {
+            background: palegreen;
+            border: 1px solid black;
+        }
+
+        .item-04 {
+            background: orange;
+            border: 1px solid black;
+        }
+
+        .item-05 {
+            background: cadetblue;
+            border: 1px solid black;
+        }
+
+        .item-06 {
+            background: cyan;
+            border: 1px solid black;
+        }
+
+        .item-07 {
+            background: tomato;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+
+    <div class="container-01">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+
+    <div class="container-02">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+
+    <div class="container-03">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+
+    <div class="container-04">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+</body>
+</html>
