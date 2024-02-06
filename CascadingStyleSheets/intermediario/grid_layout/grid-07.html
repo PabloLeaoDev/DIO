@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Exemplos</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 100px 3fr 1fr;
+            margin: 0;
+            height: 100vh;
+            grid-template-areas: "navbar logo" "sidebar main" "sidebar footer";
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            background: lightcoral;
+            grid-area: logo;
+        }
+
+        img {
+            height: 100px;
+        }
+
+        nav {
+            background: yellow;
+            grid-area: navbar;
+        }
+
+        aside {
+            background: skyblue;
+            grid-area: sidebar;
+        }
+
+        main {
+            background: darkblue;
+            color: white;
+            grid-area: main;
+        }
+
+        footer {
+            background: palegreen;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class=" flex logo">
+        <img src="assets/images/dio-logo.png" alt="Digital Innovation One">
+    </div>
+    <nav class="flex">navbar</nav>
+    <aside class="flex">sidebar</aside>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem voluptatum corporis, necessitatibus fuga animi tempore aperiam voluptates? Ut architecto quia itaque totam, tempore, fugiat, illum quaerat amet ad animi ullam.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis magni itaque corrupti voluptas, error est nihil laudantium deserunt laboriosam tempora quam voluptatum in. Eveniet ducimus exercitationem sint commodi recusandae sapiente?
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus ratione velit iste hic fugit praesentium odio inventore vitae perspiciatis, veniam, dignissimos dolores illo porro necessitatibus nisi excepturi facilis minima consectetur?
+        </p>
+    </main>
+    <footer class="flex">
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
