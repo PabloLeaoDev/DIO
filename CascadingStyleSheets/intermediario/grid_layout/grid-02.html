@@ -51,7 +51,7 @@
             grid-template-columns: repeat(auto-fill, 100px); /* coloca o máximo de items que ele conseguir em uma mesma linha, alocando os espaços restantes, caso haja */
         }
 
-        .container-04 {
+       .container-04 {
             border: 1px solid black;
             padding: 10px;
             background: yellow;
@@ -62,7 +62,23 @@
             grid-template-columns: repeat(auto-fit, 100px); /* ao contrário do auto-fill, não aloca nenhum espaço extra */
         }
 
-        /* na propriedade grid-template-columns e grid-template-rows também há as palavras-chave min-content, max-content e auto */
+        /* a propriedade grid-template-columns e grid-template-rows também há as palavras-chave min-content, max-content e auto */
+
+        .container-05 {
+            border: 1px solid black;
+            padding: 10px;
+            background: yellow;
+            height: 500px;
+            margin-bottom: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-auto-flow: column;
+            grid-auto-columns: 200px;
+        } 
+
+        /* há o grid implícito e o explícito, o primeiro se trata do grid que não foi determinado, já o segundo é o contrário do primeiro */
 
         .item-01 {
             background: palevioletred;
@@ -142,6 +158,16 @@
     </div>
 
     <div class="container-04">
+        <div class="item item-01">Item 1</div>
+        <div class="item item-02">Item 2</div>
+        <div class="item item-03">Item 3</div>
+        <div class="item item-04">Item 4</div>
+        <div class="item item-05">Item 5</div>
+        <div class="item item-06">Item 6</div>
+        <div class="item item-07">Item 7</div>
+    </div>
+
+    <div class="container-05">
         <div class="item item-01">Item 1</div>
         <div class="item item-02">Item 2</div>
         <div class="item item-03">Item 3</div>
