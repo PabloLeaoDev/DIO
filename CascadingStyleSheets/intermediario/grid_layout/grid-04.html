@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Exemplos</title>
+    <style>
+        .container {
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+            grid-template-rows: 50px 100px 150px;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            background: orange;
+            border-radius: 10px;
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-1 {
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+            grid-template-rows: 50px 100px 150px;
+            margin-bottom: 20px;
+        }
+
+        .item-1 {
+            background: deepskyblue;
+            border-radius: 10px;
+            /* 
+            grid-column-start: 1;
+            grid-column-end: span 3;  
+            ou o shorthand abaixo
+            */
+            grid-column: 1 / span 3;
+
+            /* 
+            grid-row-start: 2;
+            grid-row-end: span 2; 
+            ou o shorthand abaixo
+            */
+
+            grid-row: 2 / span 2;
+
+            /* o 'span' significa que o item vai tomar como referência as "células" grid, e não as linhas ou colunas */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-2 {
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 100px); 
+            margin-bottom: 20px;
+        }
+
+        .item-2 {
+            background: deeppink;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selected {
+            background: aqua;
+            color: black;
+            grid-column: 2 / 3;
+            grid-row: 2 / span 1;
+        }
+
+        .container-3 {
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            margin-bottom: 20px; 
+        }
+
+        .item-3 {
+            background: deeppink;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selected-1 {
+            background: aqua;
+            color: black;
+            grid-column: 3 / span 1;
+            grid-row: 2 / 3;
+        }
+
+        .container-4 {
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: [ft-line-col] 1fr [sd-line-col] 1fr [th-line-col] 1fr [fh-line-col];
+            grid-template-rows: [ft-line-row] 100px [sd-line-row] 100px [th-line-row];
+        }
+
+        /* as linhas do grid foram nomeadas através dos colchetes ([]); é uma opção para quem não quer usar números para identificá-las */
+
+        .item-4 {
+            background: deeppink;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selected-2 {
+            background: aqua;
+            color: black;
+            grid-column: sd-line-col / span 1;
+            grid-row: sd-line-row / span 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">.item-a</div>
+    </div>
+
+    <div class="container-1">
+        <div class="item-1">.item-b</div>
+    </div>
+
+    <div class="container-2">
+        <div class="item-2 selected">1</div>
+        <div class="item-2">2</div>
+        <div class="item-2">3</div>
+        <div class="item-2">4</div>
+        <div class="item-2">5</div>
+        <div class="item-2">6</div>
+    </div>
+
+    <div class="container-3">
+        <div class="item-3 selected-1">1</div>
+        <div class="item-3">2</div>
+        <div class="item-3">3</div>
+        <div class="item-3">4</div>
+        <div class="item-3">5</div>
+        <div class="item-3">6</div>
+    </div>
+
+    <div class="container-4">
+        <div class="item-4 selected-2">1</div>
+        <div class="item-4">2</div>
+        <div class="item-4">3</div>
+        <div class="item-4">4</div>
+        <div class="item-4">5</div>
+        <div class="item-4">6</div>
+    </div>
+</body>
+</html>
