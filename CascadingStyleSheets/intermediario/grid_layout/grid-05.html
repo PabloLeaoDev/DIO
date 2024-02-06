@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Exemplos</title>
+    <style>
+        .container {
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: [ft-line-col] 1fr [sd-line-col] 1fr [th-line-col] 1fr [fh-line-col];
+            grid-template-rows: [ft-line-row] 100px [sd-line-row] 100px [th-line-row];
+        }
+
+        /* as linhas do grid foram nomeadas através dos colchetes ([]); é uma opção para quem não quer usar números para identificá-las */
+
+        .item {
+            background: deeppink;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selected {
+            background: aqua;
+            color: black;
+            /* 
+            grid-column: sd-line-col / span 1;
+            grid-row: sd-line-row / span 1; 
+            ou o shorthand dos shorthands abaixo
+            */
+            grid-area: sd-line-row / sd-line-col/ span 1 / span 1;
+            /* row-start / column-start / row-end / column-end */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item selected">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
