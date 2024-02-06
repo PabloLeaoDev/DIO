@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Exemplos</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            grid-template-areas: "header header header header" "main main . sidebar" "footer footer footer footer";
+            /* nomeando cada área/célula do grid; cada nome representa uma área na linha 'x' (cada linha está contida em um abrir e fechar de aspas, da primeira a última respectivamente) */
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            grid-area: header;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:  deepskyblue;
+            grid-area: main;
+        }
+
+        aside {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightcoral;
+            grid-area: sidebar;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellowgreen;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>main</main>
+    <aside>sidebar</aside>
+    <footer>footer</footer>
+</body>
+</html>
