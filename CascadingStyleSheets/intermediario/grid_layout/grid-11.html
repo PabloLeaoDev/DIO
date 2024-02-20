@@ -8,7 +8,19 @@
         body {
             display: grid;
             border: 3px solid;
-            grid-template: repeat(3, 200px) / repeat(3, 1fr);
+            height: 600px;
+            grid-template: repeat(3, auto) / repeat(3, auto);
+            place-items: center;
+
+            /* as propriedades abaixo organizam os conteúdos dos containers */
+
+            /*
+            justify-content: center;
+            align-content: center; 
+            */
+
+            /* shorthand similar ao place-items, contudo ara o conteúdo */
+            place-content: center;
         } 
 
         .item-01 {
