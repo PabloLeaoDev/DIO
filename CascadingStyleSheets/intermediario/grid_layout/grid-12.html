@@ -15,6 +15,7 @@
 
         .item-01 {
             background: palegoldenrod;
+            align-self: end;
         }
 
         .item-02 {
@@ -23,22 +24,36 @@
 
         .item-03 {
             background: palegreen;
+            justify-self: end;
+            align-self: start;
         }
 
         .item-04 {
             background: palevioletred;
+            align-self: start;
         }
 
         .item-05 {
             background: lightseagreen;
+            justify-self: end;
         }
 
         .item-06 {
             background: blueviolet;
+            justify-self: start;
         }
 
         .item-07 {
             background: palegreen;
+            
+            /* 
+            justify-self: start;
+            align-self: end; 
+            */
+
+            /* shorthand abaixo */
+
+            place-self: end start;
         }
 
         .item-08 {
@@ -57,8 +72,8 @@
     <div class="item item-04">André Gomes</div>
     <div class="item item-05">Alice Pereira Andrade</div>
     <div class="item item-06">Camila Gonçalves</div>
-    <div class="item item-03">Sofia Antonieta</div>
-    <div class="item item-01">Kaio Ribeiro</div>
-    <div class="item item-02">Michele Ambrosio</div>
+    <div class="item item-07">Sofia Antonieta</div>
+    <div class="item item-08">Kaio Ribeiro</div>
+    <div class="item item-09">Michele Ambrosio</div>
 </body>
 </html>
