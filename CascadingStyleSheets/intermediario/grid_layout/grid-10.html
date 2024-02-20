@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justify-items</title>
+    <title>place-items</title>
     <style>
         body {
             display: grid;
@@ -15,10 +15,17 @@
             column-gap: 20px; 
             shorthand abaixo
             */
+
             gap: 15px;
-            justify-items: center; /* alinha horizontalmente */
-            align-items: center; /* alinha verticalmente */
-        }
+
+            /* 
+            justify-items: center; alinha horizontalmente 
+            align-items: center; alinha verticalmente 
+            SHORTHAND ABAIXO
+            */
+
+            place-items: end start; /* align-items e justify-items */ 
+        } 
 
         .item-01 {
             background: palegoldenrod;
