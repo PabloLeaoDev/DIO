@@ -140,14 +140,19 @@ section.videos {
 }
 
 .video img {
+    width: 42px;
+    height: 42px;
+}
+
+img.thumbnail {
     width: 250px;
     height: 140px;
 }
 
 .labels {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: grid;
+    grid-template: 1fr 1fr / 42px 188px;
+    gap: 10px;
 
     font-size: .9rem;
 }
@@ -161,6 +166,7 @@ section.videos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    grid-column-start: 2;
 
     width: 175px;
 }
