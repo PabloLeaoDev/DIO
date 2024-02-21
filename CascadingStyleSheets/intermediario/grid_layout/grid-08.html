@@ -15,7 +15,7 @@
             ***** grid-template-areas
             */
 
-            grid-template: "header header header header" 200px "main main . sidebar" 300px "footer footer footer footer" 200px / 1fr 2fr 1fr 1fr; 
+            grid-template: "header header header header" 200px "main . sidebar sidebar" 300px "main footer footer footer" 200px / 1fr 2fr 1fr 1fr; 
             /* a sintaxe acima não permite a função repeat() */
         }
 
@@ -25,6 +25,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            grid-area: header;
         }
 
         .item-1 {
@@ -33,6 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            grid-area: main;
         }
 
         .item-2 {
@@ -40,6 +42,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            grid-area: sidebar;
         }
 
         .item-3 {
@@ -47,6 +50,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            grid-area: footer;
         }
     </style>
 </head>
