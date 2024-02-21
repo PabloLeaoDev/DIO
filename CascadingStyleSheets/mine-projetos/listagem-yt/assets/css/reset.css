@@ -1,0 +1,7 @@
+@import url('http://meyerweb.com/eric/tools/css/reset/');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}

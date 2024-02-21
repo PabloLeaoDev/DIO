@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/imagens/ytc-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css" media="screen">
+    <title>Youtube Clonado</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="material-icons">menu</i>
+                <span>
+                    <img src="assets/imagens/logo-yt.png" alt="logo do youtube">
+                    <img src="assets/imagens/logomarca-yt.png" alt="logomarca do youtube" class="invert">
+                </span>
+            </div>
+            <div class="search-bar">
+                <span>Pesquisar</span>
+                <div class="search">
+                    <img src="assets/imagens/search.png" alt="lupa" class="invert">
+                </div>
+            </div>
+            <div class="profile">
+                <img src="assets/imagens/search.png" alt="lupa" class="invert none">
+                <img src="assets/imagens/camera.png" alt="câmera" class="invert">
+                <img src="assets/imagens/bell.png" alt="sino" class="invert">
+                <img src="assets/imagens/avatar.jpg" alt="avatar" class="avatar">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="dad">
+            <!-- section 1 -->
+            <section class="video">
+                <img src="assets/imagens/video.png" alt="simulação de vídeo">
+                <h2>
+                    Aprenda FLEXBOX CSS JOGANDO! | Getting Started #11
+                </h2>
+            </section>
+            <!-- section 2 -->
+            <section class="dio">
+                <div class="channel">
+                    <div class="channel-avatar">
+                        <img src="assets/imagens/channel-avatar.png" alt="avatar do canal">
+                        <div class="channel-name">
+                            <span>DIO</span>
+                            <p>104 mil inscritos</p>
+                        </div>
+                    </div>
+                    <button class="subscribe"><span>Inscreva-se</span></button>
+                </div>
+                <div class="buttons">
+                    <!-- PARA UTILIZAR NO BREAKPOINT 768px EM DIANTE -->
+                    <div class="channel-1">
+                        <div class="channel-avatar-1">
+                            <img src="assets/imagens/channel-avatar.png" alt="avatar do canal">
+                            <div class="channel-name-1">
+                                <span>DIO</span>
+                                <p>104 mil inscritos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="subscribe-1"><span>Inscreva-se</span></button>
+                    <!---->
+                    <div class="thumbs">
+                        <button class="like">
+                            <img src="assets/imagens/like.png" alt="gostei">
+                            <span>537</span>
+                        </button>
+                        <button class="deslike">
+                            <img src="assets/imagens/deslike.png" alt="não gostei">
+                        </button>
+                    </div>
+                    <button class="share">
+                        <img src="assets/imagens/share.png" alt="compartilhar">
+                        <span>compartilhar</span>
+                    </button>
+                    <button class="download">
+                        <img src="assets/imagens/download.png" alt="download">
+                        <span>download</span>
+                    </button>
+                    <button class="clip">
+                        <img src="assets/imagens/clip.png" alt="clip">
+                        <span>clipe</span>
+                    </button>
+                    <button class="more">
+                        <span>...</span>
+                    </button>
+                </div>
+                <div class="description">
+                    <strong>5,2 mil visualizações  há 1 ano</strong> <span>Getting Started - Comece por aqui!</span>
+                    ➜ Cadastre-se na DIO e faça nosso curso completo e gratuito: Posicionando elementos com Flexbox em CSS <a href="https://bit.ly/3DfP5up" target="_blank">https://bit.ly/3DfP5up</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="bro-dad">
+            <!-- section 3 -->
+            <section class="other-videos">
+                <div class="thumbnails">
+                    <img src="assets/imagens/image1.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Geração Tech Unimed - BH - Ciência de Dados</h4>
+                        <p>DIO</p>
+                        <div class="sub-label">
+                            <p>2,1 mil vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 2 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image2.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Scrum Talks</h4>
+                        <p>DIO</p>
+                        <div class="sub-label">
+                            <p>1,6 mil vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 3 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image3.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Machine Learning Avançado - Fast Track</h4>
+                        <p>DIO</p>
+                        <div class="sub-label">
+                            <p>1,7 mil vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 4 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image4.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Global Skills #2 - Project Planning</h4>
+                        <p>DIO</p>
+                        <div class="sub-label cent">
+                            <p>971 vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 5 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image5.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Como aprender a programar Python do ZERO</h4>
+                        <p>DIO</p>
+                        <div class="sub-label cent">
+                            <p>711 vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 6 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image1.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Geração Tech Unimed - BH - Ciência de Dados</h4>
+                        <p>DIO</p>
+                        <div class="sub-label">
+                            <p>2,1 mil vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 2 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image2.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Scrum Talks</h4>
+                        <p>DIO</p>
+                        <div class="sub-label">
+                            <p>1,6 mil vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 3 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image3.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Machine Learning Avançado - Fast Track</h4>
+                        <p>DIO</p>
+                        <div class="sub-label">
+                            <p>1,7 mil vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 4 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image4.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Global Skills #2 - Project Planning</h4>
+                        <p>DIO</p>
+                        <div class="sub-label cent">
+                            <p>971 vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 5 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/imagens/image5.png" alt="thumbnail">
+                    <div class="labels">
+                        <h4>Como aprender a programar Python do ZERO</h4>
+                        <p>DIO</p>
+                        <div class="sub-label cent">
+                            <p>711 vizualizações</p>
+                            <div class="dot"><!-- PONTO DE SEPARAÇÃO --></div>
+                            <p>há 6 dias</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
