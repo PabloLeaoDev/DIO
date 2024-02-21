@@ -15,5 +15,5 @@ html, body {
 
 body {
     display: grid;
-    grid-template: "hd hd hd hd hd" 65px "menu vd vd vd vd" 1fr "menu vd vd vd vd" 1fr "menu vd vd vd vd" 1fr "menu vd vd vd vd" 1fr;
+    grid-template: "hd hd hd hd hd" 65px "menu vd vd vd vd" 1fr "menu vd vd vd vd" 1fr "menu vd vd vd vd" 1fr "menu vd vd vd vd" 1fr / 1fr 1fr 1fr 1fr 1fr;
 }

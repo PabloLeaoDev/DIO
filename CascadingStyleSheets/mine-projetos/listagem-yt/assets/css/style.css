@@ -8,12 +8,12 @@
 }
 
 header {
-    width: 97.7%;
     height: 65px;
 
     position: fixed;
     background: var(--cinza-escuro);
     z-index: 1;
+    grid-area: hd;
 }
 
 header nav {
