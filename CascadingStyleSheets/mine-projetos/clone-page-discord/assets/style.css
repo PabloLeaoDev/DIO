@@ -46,6 +46,10 @@ h1 {
     color: white;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 /* MAIN */
 
 .secao {

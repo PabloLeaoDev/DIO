@@ -1,0 +1,59 @@
+@media screen and (min-width: 768px) {
+    header, section {
+        display: flex;
+        flex-direction: column;
+    }    
+
+    /* HEADER */
+
+    header {
+        background-image: url('imagens/header_bg-g.png');
+        align-items: center;
+        height: 380px;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 4rem;
+        width: 360px;
+    }
+
+    .botaos {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 25%;
+    }
+
+    .open {
+        width: 40%;
+        margin: 0;
+    }
+
+    /* SECTION */
+
+    .s1, .s3 {
+        flex-direction: row;
+    }
+
+    .s2 {
+        flex-direction: row-reverse;
+    }
+
+    .s4 {
+        align-items: center;
+    }
+
+    .s4 h1 {
+        text-align: center;
+    }
+
+    .s4 img {
+        width: 70%;
+    }
+}
