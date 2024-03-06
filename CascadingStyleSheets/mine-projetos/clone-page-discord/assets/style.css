@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+    --discord-color: rgba(35, 39, 42, 1);
+}
+
 /* HEADER */
 
 header {
@@ -33,12 +37,12 @@ h1 {
 }
 
 .download {
-    color: rgba(35, 39, 42, 1);
+    color: var(--discord-color);
 }
 
 .open {
     margin-top: 15px;
-    background: rgba(35, 39, 42, 1);
+    background: var(--discord-color);
     color: white;
 }
 
@@ -56,4 +60,14 @@ h2 {
 
 .s4 h1 {
     width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--discord-color);
+    height: 140px;
 }
