@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* HEADER */
+
+header {
+    background-image: url('imagens/header_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 440px;
+    padding: 72px 24px;
+}
+
+h1 {
+    font-family: 'Luckiest Guy';
+    font-weight: normal;
+    text-transform: uppercase;
+    width: 180px;
+    margin-bottom: 35px;
+}
+
+.botaos {
+    margin-top: 35px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    height: 55px;
+}
+
+.download {
+    color: rgba(35, 39, 42, 1);
+}
+
+.open {
+    margin-top: 15px;
+    background: rgba(35, 39, 42, 1);
+    color: white;
+}
+
