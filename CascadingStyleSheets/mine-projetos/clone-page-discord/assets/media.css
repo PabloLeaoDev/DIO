@@ -1,3 +1,5 @@
+/* tablets breakpointer */
+
 @media screen and (min-width: 768px) {
     header, section {
         display: flex;
@@ -16,6 +18,11 @@
         text-align: center;
         font-size: 4rem;
         width: 360px;
+    }
+
+    header p {
+        width: 80%;
+        text-align: center;
     }
 
     .botaos {
@@ -53,7 +60,93 @@
         text-align: center;
     }
 
+    .s4 p {
+        text-align: center;
+    }
+
     .s4 img {
         width: 70%;
+    }
+}
+
+/* leptops breakpointer */
+
+@media screen and (min-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    div {
+        width: 40%;
+    }
+
+    picture {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        max-width: 100%;
+    }
+
+    picture img {
+        width: 70%;
+        max-width: 100%;
+    }
+}
+
+/* descktops breakpointer */
+
+@media screen and (min-width: 1440px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+
+    header {
+        height: 440px;
+    }
+
+    header p {
+        width: 60%;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    section {
+        margin-top: 70px;
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    section img {
+        width: 80%;
+    }
+
+    div {
+        width: 50%;
+    }
+
+    .s4 h1 {
+        font-size: 3rem;
+    }
+
+    .s4 img {
+        width: 100%;
+        margin: auto;
     }
 }
