@@ -1,0 +1,6 @@
+p::first-line {
+    color: blue;
+    background: lightblue;
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
