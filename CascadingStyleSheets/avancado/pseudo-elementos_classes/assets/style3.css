@@ -1,0 +1,9 @@
+summary::marker {
+    content: '☑ ';
+    color: green;
+}
+
+li::marker {
+    content: '✞ ';
+    color: brown;
+}
