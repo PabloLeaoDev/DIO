@@ -1,0 +1,11 @@
+.slc1::selection {
+    color: white;
+}
+
+.slc::selection {
+    background-color: aquamarine;
+}
+
+.slc1::selection {
+    background-color: red;
+}
