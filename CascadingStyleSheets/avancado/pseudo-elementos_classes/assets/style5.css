@@ -1,11 +1,11 @@
-.slc1::selection {
-    color: white;
-}
-
 .slc::selection {
+    color: blue;
     background-color: aquamarine;
 }
 
 .slc1::selection {
+    color: white;
     background-color: red;
+    text-decoration: line-through; 
+    /* nem todos os valores das propriedades text funcionam */
 }
