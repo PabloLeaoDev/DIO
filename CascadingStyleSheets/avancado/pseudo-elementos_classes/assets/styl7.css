@@ -1,0 +1,32 @@
+.ex::before {
+    content: '♛';
+    color: gold;
+    background-color: rgb(146, 111, 22);
+    padding: 3px;
+}
+
+.ex1::after {
+    content: '♚';
+    color: red;
+    background-color: rgb(146, 111, 22);
+    padding: 3px;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    background-image: url('media/mountain.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+div::after {
+    content: '';
+    background-image: linear-gradient(transparent, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.7));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
