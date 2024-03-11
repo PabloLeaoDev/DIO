@@ -1,0 +1,13 @@
+button {
+    background-color: palevioletred;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+}
+
+button:hover {
+    background-color: palegreen;
+    color: darkgreen;
+    border: 1px solid darkgreen;
+    cursor: pointer;
+}
