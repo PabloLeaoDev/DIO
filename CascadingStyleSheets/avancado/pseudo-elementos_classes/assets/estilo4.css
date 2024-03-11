@@ -1,0 +1,10 @@
+button:disabled {
+    background-color: black;
+    color: yellow;
+    opacity: .2;
+}
+
+button:enabled {
+    background: blue;
+    color: white;
+}
