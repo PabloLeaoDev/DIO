@@ -1,0 +1,15 @@
+input {
+    accent-color: red;
+}
+
+input:checked {
+    box-shadow: 0 0 5px 2px greenyellow;
+}
+
+input:checked + label {
+    text-decoration: line-through;
+}
+
+progress:indeterminate {
+    accent-color: red;
+}
