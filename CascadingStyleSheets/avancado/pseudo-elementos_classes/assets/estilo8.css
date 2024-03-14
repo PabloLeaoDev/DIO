@@ -10,3 +10,19 @@ form {
     width: 230px;
     margin: auto;
 }
+
+input:valid {
+    border: 1px solid green;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:in-range {
+    background-color: palegreen;
+}
+
+input:out-of-range {
+    background-color: orangered;
+}
