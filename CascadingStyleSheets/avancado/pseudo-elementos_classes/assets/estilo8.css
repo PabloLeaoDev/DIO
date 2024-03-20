@@ -11,18 +11,23 @@ form {
     margin: auto;
 }
 
-input:valid {
-    border: 1px solid green;
+input:valid, input:in-range {
+    border: 1px solid palegreen;
+    color: green;
 }
 
-input:invalid {
-    border: 1px solid red;
+input:invalid, input:out-of-range {
+    border: 1px solid orangered;
+    color: red;
 }
 
-input:in-range {
-    background-color: palegreen;
+.error {
+    color: orangered;
+    font-size: .75rem;
+    margin-top: 4px;
+    display: none;
 }
 
-input:out-of-range {
-    background-color: orangered;
+input:invalid + .error {
+    display: block;
 }

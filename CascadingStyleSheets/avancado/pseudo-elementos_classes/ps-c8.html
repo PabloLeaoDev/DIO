@@ -19,21 +19,29 @@
     <form action="#" method="post">
         <h2>Faça sua compra:</h2>
         <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email">
+        <span class="error">E-mail inválido!</span>
+        <br><br>
         
         <label for="codigo_produto">Código do Produto:</label><br>
-        <input type="text" id="codigo_produto" name="codigo_produto" min="1000" max="10000" required><br><br>
+        <input type="number" id="codigo_produto" name="codigo_produto" min="1000" max="10000">
+        <span class="error">Código inválido!</span>
+        <br><br>
         
         <label for="cupom_desconto">Cupom de Desconto:</label><br>
-        <input type="text" id="cupom_desconto" name="cupom_desconto" placeholder="Apenas letras minúsculas" pattern="[a-z]+"><br><br>
+        <input type="text" id="cupom_desconto" name="cupom_desconto" placeholder="Apenas letras minúsculas" pattern="[a-z]+">
+        <span class="error">Cupom inválido!</span>
+        <br><br>
         
         <label for="data_nascimento">Data de Nascimento:</label><br>
-        <input type="date" id="data_nascimento" name="data_nascimento" min="1964-01-01" max="2005-12-31" required><br><br>
+        <input type="date" id="data_nascimento" name="data_nascimento" min="1964-01-01" max="2005-12-31"><br><br>
         
         <label for="quantidade">Quantidade:</label><br>
-        <input type="number" id="quantidade" name="quantidade" min="3" max="10" required><br><br>
-        
-        <input type="checkbox" id="termos_uso" name="termos_uso" required>
+        <input type="number" id="quantidade" name="quantidade" min="3" max="10">
+        <span class="error">Quantidade inválida!</span>
+        <br><br>
+
+        <input type="checkbox" id="termos_uso" name="termos_uso">
         <label for="termos_uso">Eu li e aceito os termos de uso</label><br><br>
         
         <input type="submit" value="Comprar">
