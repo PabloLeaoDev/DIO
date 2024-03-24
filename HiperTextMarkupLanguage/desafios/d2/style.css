@@ -86,7 +86,11 @@ footer {
     min-height: 150px;
     color: var(--primary-ap-color);
     padding: 10px;
+    text-align: center;
 }
 
-.address {
+footer .info {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
 }
