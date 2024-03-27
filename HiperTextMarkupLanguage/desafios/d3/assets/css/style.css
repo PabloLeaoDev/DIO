@@ -3,15 +3,16 @@ body, html {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
-.bar {
+ul {list-style: none; padding-left: 5px;}
+a {color:blue; text-decoration: none;}
+h1 {font-size: 2rem;}
+nav {
     background-color: #f9f9fb;
     padding:15px;
     border-top: solid 1px #cdcdcd;
     border-bottom: solid 1px #cdcdcd;
 }
-.content {
+main {
     max-width: 1440px;
     margin: auto;
     grid-gap: 3rem;
@@ -22,16 +23,28 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.footer {
+#kumite {
+    grid-area: "main";
+}
+footer {
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
+}
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+    grid-area: "sidebar";
+}
+table {
+    font-size: 86%; 
+    width: 23em; 
+    border-radius:2px;
+    border: 2px solid gray;
+    margin: 30px auto;
 }
 .anchors {
     border-left: solid 1px #cdcdcd;
     padding-left: 15px;
-}
-.sidebar {
-    border-right: solid 1px #cdcdcd;
+    grid-area: "anchors";
 }
 figure {
     text-align: center;
