@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 200px;
+    perspective-origin: center;
+}
+
+.box {
+    background: linear-gradient(90deg, red, blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: 2s;
+    transform-origin: left top;
+}
+
+.box:hover {
+    transform: rotate(45deg);
+}
