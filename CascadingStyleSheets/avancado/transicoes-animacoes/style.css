@@ -1,0 +1,17 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: linear-gradient(90deg, red, blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.box:hover {
+    transform: translate(50px, 100px);
+}
