@@ -12,6 +12,26 @@ body {
     border-radius: 50%;
 }
 
-.box:hover {
+/* .box:hover {
     transform: translate(50px, 100px);
+} */
+
+.box {
+    border-radius: 10px;
 }
+
+/* .box:hover {
+    transform: rotate(-45deg);
+} 
+há o rotatex() e o rotatey() que rotaciona o objeto em uma perspectiva 3d
+*/
+
+/* .box:hover {
+    transform: scale(2, 3);
+} */
+
+.box:hover {
+    transform: skewX(20deg);
+}
+
+/* a função matrix() da propriedade transform é usada para aglomerar todas as outras funções, como uma shorthand. */
