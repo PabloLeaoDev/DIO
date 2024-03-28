@@ -4,18 +4,25 @@ body {
     justify-content: center;
     align-items: center;
     perspective: 200px;
-    perspective-origin: center;
+    perspective-origin: top;
+    transform-style: preserve-3d;
 }
 
 .box {
-    background: linear-gradient(90deg, red, blue);
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    transition: 2s;
-    transform-origin: left top;
+    position: absolute;
 }
 
-.box:hover {
-    transform: rotate(45deg);
+.box:nth-child(1) {
+    background: linear-gradient(to right, red, blue);
+    transform: rotateY(40deg);
 }
+
+.box:nth-child(2) {
+    background: linear-gradient(to right, orangered, yellow);
+    transform: rotateY(-40deg);
+}
+
+/* há a função matrix3d que é um shorthand para a propriedade transform que contempla todas as transformações 3d */
