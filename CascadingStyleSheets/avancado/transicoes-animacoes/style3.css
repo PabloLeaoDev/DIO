@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 200px;
+    perspective-origin: top;
+    transform-style: preserve-3d;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    background: #d53369;
+    animation: change 3s infinite alternate linear;
+}
+
+@keyframes change {
+    0% {
+        background: palegreen;
+        scale: 1;
+    }
+    100% {
+        background: palevioletred;
+        scale: 2;
+    }
+}
