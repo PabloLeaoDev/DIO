@@ -1,0 +1,30 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 200px;
+    perspective-origin: top;
+    transform-style: preserve-3d;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    background: #d53369;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: background linear 2s, transform ease-in-out 1s;
+}
+
+.box:hover {
+    background-color: yellowgreen;
+    transform: rotateX(45deg);
+}
