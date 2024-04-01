@@ -17,6 +17,10 @@ body {
     animation: change 3s infinite alternate linear;
 }
 
+.box:hover {
+    animation-play-state: paused;
+}
+
 @keyframes change {
     0% {
         background: palegreen;
