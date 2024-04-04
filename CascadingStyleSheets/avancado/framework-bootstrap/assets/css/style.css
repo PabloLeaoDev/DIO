@@ -10,6 +10,10 @@
     width: 50px;
 }
 
+main {
+    margin-top: 5rem;
+}
+
 /* Tamanho do Carrosel */
 
 .carousel-item {
@@ -28,4 +32,9 @@
     height: 100%;
     background: linear-gradient(transparent, rgb(31, 31, 31));
     position: absolute;
+}
+
+.card-menu img {
+    height: 300px;
+    object-fit: cover;
 }
