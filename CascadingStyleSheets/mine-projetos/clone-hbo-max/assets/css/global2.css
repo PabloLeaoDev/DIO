@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+@font-face {
+  font-family: "Raleway";
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+}
 
 :root {
   --primary-color: #020228;
@@ -20,7 +26,7 @@
     rgba(255, 0, 229, 0.5) 80%
   );
   --nav-bg-color: rgba(0, 0, 0, 0.3);
-  --text-color: #fff;
+  --text-color: #cfcfcf;
   --link-color: #9e86ff;
   --form-bg-color: rgba(211, 211, 211, 0.06);
   --form-field-bg-color: rgba(0, 0, 0, 0.2);
@@ -34,6 +40,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Custom Scroll */
