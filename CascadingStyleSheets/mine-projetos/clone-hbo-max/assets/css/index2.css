@@ -170,8 +170,7 @@ html, body {
 /* MAIN */
 
 main {
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
     padding: 0px 25px;
 }
 
@@ -190,6 +189,7 @@ main {
 
 .sign__divider {
     background: var(--card-bg-color);
+    width: 550px;
     padding: 40px 60px;
     border-radius: 8px;
     display: flex;
@@ -246,4 +246,19 @@ main {
     letter-spacing: 4px;
     border: none;
     cursor: pointer;
+}
+.main__discover {
+    margin: 100px 0px;
+}
+
+.discover__poster {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.discover__image img {
+    width: 100%;
 }
