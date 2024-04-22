@@ -36,7 +36,7 @@ rl.question('\nDigite o nome do herói: ', (name) => {
         console.log(`\nO Herói de nome ${hero[0]} está no nível Imortal.`);
         break;
       case convertXP > 10000: // maior que 10000
-        console.log(`\nO Herói de nome ${hero[0]} está no nível Radiante.`);
+        console.log(`\nO Herói de nome ${hero[0]} está no nível Radiante.\n`);
         break;
     }
     rl.close();
