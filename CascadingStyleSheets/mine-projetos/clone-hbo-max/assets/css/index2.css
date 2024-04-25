@@ -161,19 +161,6 @@ html, body {
     color: var(--text-color);
 }
 
-.header__sign {
-    text-decoration: none;
-    color: white;
-    padding: 16px 40px;
-    cursor: pointer;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
-    border-radius: 500px;
-    background: var(--btn-bg-color-gradient);
-}
-
 .header__year {
     width: 300px;
     text-align: center;
@@ -182,6 +169,33 @@ html, body {
 
 .header__sign {
     animation: wiggle 2.2s linear infinite;
+}
+
+.sign {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+  
+  .sign.btn--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+  
+  .sign.btn--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
 }
 
 /* MAIN */
