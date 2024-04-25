@@ -327,10 +327,70 @@ main {
 
 .discover__divider {
     width: 100%;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
 }
 
 .discover__image img {
     width: 100%;
+}
+  
+
+.discover__divider:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertiary-color);
+}
+  
+.discover__divider:hover .discover__image {
+    opacity: 0;
+}
+  
+.discover__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+
+/* HBO Content */
+
+.discover__divider:nth-child(1):hover {
+    background-image: url("../images/hbo-hover_0.webp");
+}
+  
+/* Max Originals Content */
+  
+.discover__divider:nth-child(2):hover {
+    background-image: url("../images/MAX-Hover.webp");
+}
+  
+/* DC Content */
+  
+.discover__divider:nth-child(3):hover {
+    background-image: url("../images/DC-Hover.webp");
+}
+  
+/* WB Content */
+  
+.discover__divider:nth-child(4):hover {
+    background-image: url("../images/WB-Hover.webp");
+}
+  
+/* CN Content */
+  
+.discover__divider:nth-child(5):hover {
+    background-image: url("../images/CN-Hover.png");
+}
+  
+/* Champions League Content */
+  
+.discover__divider:nth-child(6):hover {
+    background-image: url("../images/UCL-Hover.webp");
 }
 
 /* FOOTER */
@@ -350,6 +410,11 @@ main {
     font-family: 'Relaway', sans-serif;
     font-size: 1rem;
     font-weight: bold;
+    transition: color 0.8s;
+}
+
+.footer__text:hover {
+    color: var(--text-color);
 }
 
 .footer__license {
