@@ -1,35 +1,45 @@
-// **O Que deve ser utilizado**
+class hero {
+    constructor(name, age, type) {
+        this.name = name;
+        this.age = age;
+        this.type = type;
+    }
 
-// - Variáveis
-// - Operadores
-// - Laços de repetição
-// - Estruturas de decisões
-// - Funções
-// - Classes e Objetos
+    attack(atk) {
+        console.log(`\nO ${this.type} ${this.name} de ${this.age} anos atacou usando ${atk}!`);
+    }
+}
 
-// ## Objetivo:
+const readline = require('readline');
 
-// Crie uma classe generica que represente um herói de uma aventura e que possua as seguintes propriedades:
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-// - nome
-// - idade
-// - tipo (ex: guerreiro, mago, monge, ninja )
-
-// além disso, deve ter um método chamado atacar que deve atender os seguientes requisitos:
-
-// - exibir a mensagem: "o {tipo} atacou usando {ataque}")
-// - aonde o {tipo} deve ser concatenando o tipo que está na propriedade da classe
-// - e no {ataque} deve seguir uma descrição diferente conforme o tipo, seguindo a tabela abaixo:
-
-// se mago -> no ataque exibir (usou magia)
-// se guerreiro -> no ataque exibir (usou espada)
-// se monge -> no ataque exibir (usou artes marciais)
-// se ninja -> no ataque exibir (usou shuriken)
-
-// ## Saída
-
-// Ao final deve se exibir uma mensagem:
-
-// - "o {tipo} atacou usando {ataque}"
-//   ex: mago atacou usando magia
-//   guerreiro atacou usando espada
+// recebe os dados do usuário
+rl.question('\nDigite o nome do herói: ', (name) => {
+  rl.question('Digite quanto de idade o herói possui: ', (age) => {
+    rl.question('Digite o tipo do herói (mago, guerreiro, monge ou ninja): ', (heroType) => {
+        // converte o tipo para maiúsculo
+        const type = heroType.toUpperCase();
+        // verifica o tipo e instancia hero adequadamente, chamando o o método attack em seguida
+        if (type == 'MAGO') {
+            let wizard = new hero(name , age, 'mago');
+            wizard.attack('magia');
+        } else if (type == 'GUERREIRO') {
+            let warrior = new hero(name, age, 'guerreiro');
+            warrior.attack('espada');
+        } else if (type == 'MONGE') {
+            let monk = new hero(name, age, 'monge');
+            monk.attack('Ki');
+        } else if (type == 'NINJA') {
+            let ninja = new hero(name, age, 'ninja');
+            ninja.attack('ninjutsu');
+        } else {
+            console.log('Tipo de herói inválido.');
+        }
+      rl.close();
+    });
+  });
+});
