@@ -1,4 +1,4 @@
-let priceFuel = 6;
+const priceFuel = 6;
 let kmSpent = 10;
 let kmDistance = 100;
 
