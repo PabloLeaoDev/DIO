@@ -1,5 +1,7 @@
 const priceFuel = 6;
-let kmSpent = 10;
+const kmSpent = 10;
 let kmDistance = 100;
 
-console.log(`Você gastará R$${kmDistance / kmSpent * priceFuel} com combustível para fazer essa viagem.`)
+const totalCost = kmDistance / kmSpent * priceFuel;
+
+console.log(`Você gastará R$${totalCost.toFixed(2)} com combustível para fazer essa viagem.`);
