@@ -1,7 +1,7 @@
 const {gets, list} = require('../gets-print/main');
 
 let maiorPar = 0;
-let menorImpar = 999;
+let menorImpar = 0;
 
 for (let index = 0; index < list.length; index++) {
     let num = list[index];
@@ -9,7 +9,7 @@ for (let index = 0; index < list.length; index++) {
     const isOdd = num % 2 === 1;
     if (isPair && num > maiorPar) {
         maiorPar = num;
-    } else if (isOdd && num < menorImpar) {
+    } else if (isOdd && num < menorImpar || menorImpar === 0) {
         menorImpar = num;
     }
 }
