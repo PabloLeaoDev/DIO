@@ -1,5 +1,4 @@
 var runner = 1
-
 class Runner {
     constructor (speed, maneuver, power, name = `Runner${runner}`) {
         this.name = name,
