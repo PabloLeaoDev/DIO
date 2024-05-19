@@ -37,6 +37,9 @@ function round() {
     return run
 }
 
+let cont1 = 0
+let cont2 = 0
+
 for (let i = 1; i < 6; i++) {
     console.log(`Rodada ${i}`)
     const block = round()
@@ -60,15 +63,37 @@ for (let i = 1; i < 6; i++) {
     }
     console.log(`${runner1} rolou um dado de ${blc} ${runnerNum1} + ${mario[vl]} = ${runnerNum1 + mario[vl]}`)
     console.log(`${runner2} rolou um dado de ${blc} ${runnerNum2} + ${bowser[vl]} = ${runnerNum2 + bowser[vl]}`)
+    if ((runnerNum1 + mario[vl]) > (runnerNum2 + bowser[vl])) {
+        cont1 += 1
+    } else if ((runnerNum1 + mario[vl]) < (runnerNum2 + bowser[vl])) {
+        cont2 += 1
+    }
     if (block === 'CONFRONTO') {
         if ((runnerNum1 + mario[vl]) > (runnerNum2 + bowser[vl])) {
             console.log(`${mario.name} venceu o confronto com ${bowser.name}! ${bowser.name} perdeu 1 ponto.`)
+            // Aqui, o vencedor perde o ponto que ele não deveria ter ganhado (saldo neutro) e o perdedor perde, simplesmente (saldo negativo)
+            cont1 -= 1
+            cont2 -= 1
+            if (cont2 < 0) {
+                cont2 = 0
+            }
         } else if ((runnerNum1 + mario[vl]) < (runnerNum2 + bowser[vl])) {
             console.log(`${bowser.name} venceu o confronto com ${mario.name}! ${mario.name} perdeu 1 ponto.`)
+            cont1 -= 1
+            cont2 -= 1
+            if (cont1 < 0) {
+                cont1 = 0
+            }
         } else {
             console.log('Ninguém venceu o contronto, foi um empate!')
         }
     }
 }
 
-// Preciso implementar o contador de pontos para determinar o vencedor final!
+if (cont1 > cont2) {
+    console.log(`${mario.name} venceu a disputa com ${bowser.name}!`)
+} else if (cont1 < cont2) {
+    console.log(`${bowser.name} venceu a disputa com ${mario.name}!`)
+} else {
+    console.log(`A disputa foi um empate!`)
+}
