@@ -14,85 +14,133 @@ class Runner {
     }
 }
 
-const mario = new Runner(4, 3, 3, 'Mario')
-const peach = new Runner(3, 4, 2, 'Peach')
-const yoshi = new Runner(2, 4, 3, 'Yoshi')
-const bowser = new Runner(5, 2, 5, 'Bowser')
-const luigi = new Runner(3, 4, 4, 'Luigi')
-const donkey = new Runner(2, 2, 5, 'Donkey Kong')
+const player1 = new Runner(4, 3, 3, 'Mario')
+const player2 = new Runner(5, 2, 5, 'Bowser')
 
 
-function round() {
+function round(index) {
     let block = Math.floor(Math.random() * 3)
     let run = ''
-    if (block === 0) {
-        run = 'RETA'
-    } else if (block === 1) {
-        run = 'CURVA'
-    } else {
-        run = 'CONFRONTO'
+    while(true) {
+        switch(block) {
+        case 0:
+            run = 'RETA'
+            break
+        case 1:
+            run = 'CURVA'
+            break
+        case 2:
+            // a condição abaixo impossibilita acontecer um confronto na primeira rodada
+            if(index === 1) {
+                block = Math.floor(Math.random() * 3)
+                continue
+            } else {
+                run = 'CONFRONTO'
+            } 
+        }
+        break
     }
-
+    
     return run
 }
 
-let cont1 = 0
-let cont2 = 0
+function choiceHullBomb() {
+    choice = Math.random()
+    if(choice < 0.5)
+        return 'Casco'
+    else
+        return 'Bomba'
+}
 
-for (let i = 1; i < 6; i++) {
-    console.log(`Rodada ${i}`)
-    const block = round()
-    const runnerNum1 = mario.track()
-    const runnerNum2 = bowser.track()
-    const runner1 = mario.name
-    const runner2 = bowser.name
-    let blc
-    let vl
-    console.log(`Bloco: ${block}`)
-    if (block === 'RETA') {
-        blc = 'velocidade'
-        vl = 'speed'
-    } else if (block === 'CURVA') {
-        blc = 'manobrabilidade'
-        vl = 'maneuver'
-    } else {
-        blc = 'poder'
-        vl = 'power'
-        console.log(`${mario.name} confrontou com ${bowser.name}`)
-    }
-    console.log(`${runner1} rolou um dado de ${blc} ${runnerNum1} + ${mario[vl]} = ${runnerNum1 + mario[vl]}`)
-    console.log(`${runner2} rolou um dado de ${blc} ${runnerNum2} + ${bowser[vl]} = ${runnerNum2 + bowser[vl]}`)
-    if ((runnerNum1 + mario[vl]) > (runnerNum2 + bowser[vl])) {
-        cont1 += 1
-    } else if ((runnerNum1 + mario[vl]) < (runnerNum2 + bowser[vl])) {
-        cont2 += 1
-    }
-    if (block === 'CONFRONTO') {
-        if ((runnerNum1 + mario[vl]) > (runnerNum2 + bowser[vl])) {
-            console.log(`${mario.name} venceu o confronto com ${bowser.name}! ${bowser.name} perdeu 1 ponto.`)
-            // Aqui, o vencedor perde o ponto que ele não deveria ter ganhado (saldo neutro) e o perdedor perde, simplesmente (saldo negativo)
-            cont1 -= 1
-            cont2 -= 1
-            if (cont2 < 0) {
-                cont2 = 0
+(function main() {
+    let cont1 = 0
+    let cont2 = 0
+    console.log(`🚨 Corrida entre ${player1.name} e ${player2.name} começando... \n`)
+    for (let i = 1; i < 6; i++) {
+        const block = round(i)
+        const runnerNum1 = player1.track()
+        const runnerNum2 = player2.track()
+        const runner1 = player1.name
+        const runner2 = player2.name
+        let blc
+        let vl
+        console.log('-----------------------------------------------------------')
+        console.log(`🏁 Rodada ${i}`)
+        console.log('-----------------------------------------------------------')
+        console.log(`Bloco: ${block}`)
+        
+        if (block === 'RETA') {
+            blc = 'velocidade'
+            vl = 'speed'
+        } else if (block === 'CURVA') {
+            blc = 'manobrabilidade'
+            vl = 'maneuver'
+        } else {
+            blc = 'poder'
+            vl = 'power'
+            console.log(`${player1.name} confrontou com ${player2.name} 🥊`)
+        }
+        console.log(`${runner1} 🎲 rolou um dado de ${blc} ${runnerNum1} + ${player1[vl]} = ${runnerNum1 + player1[vl]}`)
+        console.log(`${runner2} 🎲 rolou um dado de ${blc} ${runnerNum2} + ${player2[vl]} = ${runnerNum2 + player2[vl]}`)
+        if ((runnerNum1 + player1[vl]) > (runnerNum2 + player2[vl])) {
+            cont1 += 1
+            if (block !== 'CONFRONTO') {
+                console.log(`${player1.name} marcou 1 ponto!`)
             }
-        } else if ((runnerNum1 + mario[vl]) < (runnerNum2 + bowser[vl])) {
-            console.log(`${bowser.name} venceu o confronto com ${mario.name}! ${mario.name} perdeu 1 ponto.`)
-            cont1 -= 1
-            cont2 -= 1
-            if (cont1 < 0) {
-                cont1 = 0
+        } else if ((runnerNum1 + player1[vl]) < (runnerNum2 + player2[vl])) {
+            cont2 += 1
+            if (block !== 'CONFRONTO') {
+                console.log(`${player2.name} marcou 1 ponto!`)
             }
         } else {
-            console.log('Ninguém venceu o contronto, foi um empate!')
+            console.log('Empatou!')
+        }
+        if (block === 'CONFRONTO') {
+            let hullOrBomb = choiceHullBomb()
+            if ((runnerNum1 + player1[vl]) > (runnerNum2 + player2[vl])) {
+                console.log(`${player1.name} venceu o confronto com ${player2.name}!`)
+                if(hullOrBomb === 'Casco') {
+                    console.log(`${player1.name} atacou ${player2.name} com um ${hullOrBomb}!`)
+                    console.log(`${player2.name} perdeu 1 ponto. 🐢`)
+                    // Aqui, o vencedor perde o ponto que ele não deveria ter ganhado (saldo neutro) e o perdedor perde, simplesmente (saldo negativo)
+                    cont1 -= 1
+                    cont2 -= 1
+                } else {
+                    console.log(`${player1.name} atacou ${player2.name} com uma ${hullOrBomb}!`)
+                    console.log(`${player2.name} perdeu 2 pontos. 💣`)
+                    cont1 -= 1
+                    cont2 -= 2
+                }
+                if (cont2 < 0) {
+                    cont2 = 0
+                }
+            } else if ((runnerNum1 + player1[vl]) < (runnerNum2 + player2[vl])) {
+                console.log(`${player2.name} venceu o confronto com ${player1.name}!`)
+                if(hullOrBomb === 'Casco') {
+                    console.log(`${player2.name} atacou ${player1.name} com um ${hullOrBomb}!`)
+                    console.log(`${player1.name} perdeu 1 ponto. 🐢`)
+                    cont2 -= 1
+                    cont1 -= 1
+                } else {
+                    console.log(`${player2.name} atacou ${player1.name} com uma ${hullOrBomb}!`)
+                    console.log(`${player1.name} perdeu 2 pontos. 💣`)
+                    cont2 -= 1
+                    cont1 -= 2
+                }
+                if (cont1 < 0) {
+                    cont1 = 0
+                }
+            } else {
+                console.log('Ninguém venceu o contronto, foi um empate!')
+            }
         }
     }
-}
-
-if (cont1 > cont2) {
-    console.log(`${mario.name} venceu a disputa com ${bowser.name}!`)
-} else if (cont1 < cont2) {
-    console.log(`${bowser.name} venceu a disputa com ${mario.name}!`)
-} else {
-    console.log(`A disputa foi um empate!`)
-}
+    console.log('-----------------------------------------------------------')
+    if (cont1 > cont2) {
+        console.log(`🏆 ${player1.name} venceu a disputa com ${player2.name}!`)
+    } else if (cont1 < cont2) {
+        console.log(`🏆 ${player2.name} venceu a disputa com ${player1.name}!`)
+    } else {
+        console.log(`A disputa foi um empate! ⚖`)
+    }
+})()
