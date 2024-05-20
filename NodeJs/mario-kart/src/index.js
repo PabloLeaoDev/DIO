@@ -52,6 +52,12 @@ function choiceHullBomb() {
         return 'Bomba'
 }
 
+function gainTurbo(player) {
+    test = Math.random()
+    console.log(`${player} tem a chance de ganhar um ponto-turbo!`)
+    return test
+}
+
 (function main() {
     let cont1 = 0
     let cont2 = 0
@@ -103,32 +109,48 @@ function choiceHullBomb() {
                     console.log(`${player1.name} atacou ${player2.name} com um ${hullOrBomb}!`)
                     console.log(`${player2.name} perdeu 1 ponto. 🐢`)
                     // Aqui, o vencedor perde o ponto que ele não deveria ter ganhado (saldo neutro) e o perdedor perde, simplesmente (saldo negativo)
-                    cont1 -= 1
-                    cont2 -= 1
+                    cont1--
+                    cont2--
                 } else {
                     console.log(`${player1.name} atacou ${player2.name} com uma ${hullOrBomb}!`)
                     console.log(`${player2.name} perdeu 2 pontos. 💣`)
-                    cont1 -= 1
+                    cont1--
                     cont2 -= 2
                 }
                 if (cont2 < 0) {
                     cont2 = 0
+                }
+                let turbo = gainTurbo(player1.name)
+                if(turbo > 0.6) {
+                    console.log(`${player1.name} ganhou +1 ponto!`)
+                    cont1++
+                }
+                else {
+                    console.log(`${player1.name} não conseguiu o ponto. Mais sorte da próxima vez!`)
                 }
             } else if ((runnerNum1 + player1[vl]) < (runnerNum2 + player2[vl])) {
                 console.log(`${player2.name} venceu o confronto com ${player1.name}!`)
                 if(hullOrBomb === 'Casco') {
                     console.log(`${player2.name} atacou ${player1.name} com um ${hullOrBomb}!`)
                     console.log(`${player1.name} perdeu 1 ponto. 🐢`)
-                    cont2 -= 1
-                    cont1 -= 1
+                    cont2--
+                    cont1--
                 } else {
                     console.log(`${player2.name} atacou ${player1.name} com uma ${hullOrBomb}!`)
                     console.log(`${player1.name} perdeu 2 pontos. 💣`)
-                    cont2 -= 1
+                    cont2--
                     cont1 -= 2
                 }
                 if (cont1 < 0) {
                     cont1 = 0
+                }
+                let turbo = gainTurbo(player2.name)
+                if(turbo > 0.6) {
+                    console.log(`${player2.name} ganhou +1 ponto!`)
+                    cont2++
+                }
+                else {
+                    console.log(`${player2.name} não conseguiu o ponto. Mais sorte da próxima vez!`)
                 }
             } else {
                 console.log('Ninguém venceu o contronto, foi um empate!')
