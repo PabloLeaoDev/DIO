@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs').promises
 const path = require('path')
 
 const filePath = path.resolve(__dirname, 'tarefas.csv')
@@ -7,9 +7,18 @@ const filePath = path.resolve(__dirname, 'tarefas.csv')
 
 async function retornarArquivo() {
     try {
-        const arquivo = await fs.promises.readFile(filePath)
+        const arquivo = await fs.readFile(filePath)
         const convert = arquivo.toString('utf8')
-        console.log(convert)
+        const noHeaderText = convert.split('\n').slice(1)
+        const obj = noHeaderText.map((linhas) => {
+            let linha = linhas.split(';')
+            const [name, maked] = linha
+            return {
+                name,
+                maked: maked.trim() === 'true'
+            }
+        })
+        console.log(obj)
     } catch(error) {
         console.error(error)
     } finally {
