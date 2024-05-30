@@ -1,0 +1,2 @@
+# Serve para ignorar a pasta node-modules ao enviar os arquivos do código. O "package-lock.json" já ficará responsável por demonstrar quais dependências estão sendo usadas.
+node-modules/
