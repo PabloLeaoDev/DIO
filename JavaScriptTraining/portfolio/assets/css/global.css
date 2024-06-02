@@ -15,5 +15,49 @@ body {
 }
 
 .main {
+    margin: 1rem;
     padding: 1rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.information p {
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.125rem;
+}
+
+.information p::before {
+    content: '';
+    display: inline-block;
+    width: .9rem;
+    height: .9rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.information .job::before {
+    background-image: url(/assets/img/icons/job.svg);
+}
+
+.information .location::before {
+    background-image: url(/assets/img/icons/location.svg);
+}
+
+.information .phone::before {
+    background-image: url(/assets/img/icons/phone.svg);
+}
+
+.information .email::before {
+    background-image: url(/assets/img/icons/email.svg);
 }
