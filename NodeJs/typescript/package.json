@@ -1,0 +1,19 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "start:watch": "tsx --watch src/index.ts",
+    "start:dist": "tsup src && node dist/index.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tsx": "^4.11.2",
+    "typescript": "^5.4.5"
+  }
+}
