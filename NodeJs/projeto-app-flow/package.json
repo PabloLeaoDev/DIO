@@ -1,0 +1,24 @@
+{
+  "name": "projeto-app-flow",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "start-watch": "tsx --watch src/server.ts",
+    "dist": "tsup dist",
+    "start-dist": "npm run dist && node/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "tsx": "^4.14.0",
+    "typescript": "^5.4.5"
+  }
+}
