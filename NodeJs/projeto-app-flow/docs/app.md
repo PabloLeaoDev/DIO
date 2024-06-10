@@ -17,7 +17,9 @@ Podcasts feitos em vídeo
 Listar os epsódios do podcast em seções de categorias.
 
 ### Implementação:
-Retorna em uma API REST (JSON) o nome do podcast, nome do epsódio, imagem de capa, link, categoria
+GET: retorna lista de epsódios
+
+response: 
 
 ```js
 [
