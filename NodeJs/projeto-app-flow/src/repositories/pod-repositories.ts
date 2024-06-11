@@ -9,9 +9,13 @@ export const repositoryPod = async (podcastName?: string) => {
     let jsonFile = JSON.parse(rawData)
 
     if (podcastName) {
+        let newJson: PodcastModel[] = []
         jsonFile = jsonFile.filter((pod: PodcastModel) => {
-            return pod.podcast === podcastName
+            if (pod.podcast === podcastName){
+                newJson.push(pod)
+            }
         })
+        jsonFile = newJson
     }
 
     return jsonFile
