@@ -1,4 +1,3 @@
-import { IncomingMessage } from "http"
 import { repositoryPod } from "../repositories/pod-repositories"
 import { FilterPodModel } from "../models/filter-pod-model"
 import { StatusCode } from "../utils/status-code"
