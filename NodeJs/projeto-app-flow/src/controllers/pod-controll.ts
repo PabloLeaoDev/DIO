@@ -10,13 +10,20 @@ import { FilterPodModel } from '../models/filter-pod-model'
 
 // controller anêmico: não tem regras de negócio, pois está tudo nos services.
 
-const defaultContent = { 'content-type': ContentType.JSON}
+const defaultContent = { 'content-type': ContentType.JSON }
 
 const getListEpsodes = async (req: IncomingMessage, res: ServerResponse) => {
-    const content = await serviceListEpisodes()
+    const content = await serviceListEpisodes(req)
 
-    res.writeHead(StatusCode.OK, defaultContent)
-    res.write(JSON.stringify(content))
+    if (content === null) {
+        res.writeHead(StatusCode.NO_CONTENT, defaultContent)
+        res.write(JSON.stringify(content))    
+    } else {
+        res.writeHead(StatusCode.OK, defaultContent)
+        res.write(JSON.stringify(content))
+    }
+
+    
 
     res.end()
 }
