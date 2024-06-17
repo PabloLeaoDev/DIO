@@ -1,10 +1,6 @@
-import express, { Request, Response } from 'express'
+import createApp from './app'
 
-const app = express()
-
-app.get('/', (req: Request, res: Response) => {
-    res.status(200).json({ 'player': 'Messi' })
-})
+const app = createApp()
 
 const PORT = process.env.PORT
 
