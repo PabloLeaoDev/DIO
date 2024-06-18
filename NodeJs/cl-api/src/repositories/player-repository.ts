@@ -13,4 +13,8 @@ const findPlayerById = async (id: number): Promise<PlayerModel | undefined> => {
     return player
 }
 
-export { findAllPlayers, findPlayerById }
+const insertPlayer = async (player: PlayerModel) => {
+    database.push(player)
+}
+
+export { findAllPlayers, findPlayerById, insertPlayer }
