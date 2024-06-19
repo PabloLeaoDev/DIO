@@ -17,4 +17,12 @@ const insertPlayer = async (player: PlayerModel) => {
     database.push(player)
 }
 
-export { findAllPlayers, findPlayerById, insertPlayer }
+const deletePlayerById = async (id: number) => {
+    const playerIndex: number = database.findIndex((p) => p.id === id)
+
+    if (playerIndex !== -1) {
+        database.splice(playerIndex, 1)
+    }
+}
+
+export { findAllPlayers, findPlayerById, insertPlayer, deletePlayerById as deletePlayer }

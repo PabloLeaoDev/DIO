@@ -28,4 +28,13 @@ const postPlayer = async (req: Request, res: Response) => {
 
 }
 
-export { getPlayer, getPlayerById, postPlayer }
+const deletePlayer = async (req: Request, res: Response) => {
+    const id = parseInt(req.params.id)
+    const httpRes = await playerService.deletePlayerService(id)
+
+    res.status(httpRes.statusCode).json(httpRes.body)
+}
+
+export { getPlayer, getPlayerById, postPlayer, deletePlayer }
+
+
