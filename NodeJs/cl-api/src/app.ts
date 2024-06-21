@@ -5,6 +5,8 @@ function createApp() {
     const app = express()
 
     app.use('/api', router)
+    app.use(express.json())
+    app.use(express.urlencoded({ extended: true }))
 
     return app
 }

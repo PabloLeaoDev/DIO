@@ -1,4 +1,4 @@
-import { PlayerModel } from "../models/interfaces"
+import { PlayerModel, StatisticsModel } from "../models/interfaces"
 import playersJson from './players.json'
 
 const database: PlayerModel[] = playersJson
@@ -25,4 +25,14 @@ const deletePlayerById = async (id: number) => {
     }
 }
 
-export { findAllPlayers, findPlayerById, insertPlayer, deletePlayerById as deletePlayer }
+const updatePlayerById = async (id: number, statistics: StatisticsModel): Promise<PlayerModel> => {
+    const playerIndex: number = database.findIndex((p) => p.id === id)
+
+    if (playerIndex !== -1) {
+        database[playerIndex].statistics = statistics
+    }
+
+    return database[playerIndex]
+}
+
+export { findAllPlayers, findPlayerById, insertPlayer, updatePlayerById, deletePlayerById }

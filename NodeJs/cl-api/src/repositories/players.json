@@ -318,5 +318,21 @@
             "Speed": 50,
             "Positioning": 90
         }
+    },
+    {
+        "id": 21,
+        "name": "Pablo Leão",
+        "club": "Jesus FC",
+        "nationality": "Brazil",
+        "position": "All",
+        "statistics": {
+            "Overall": 99,
+            "Pace": 99,
+            "Shooting": 99,
+            "Passing": 99,
+            "Dribbling": 99,
+            "Defending": 99,
+            "Physical": 99
+        }
     }
 ]

@@ -1,4 +1,4 @@
-import { PlayerModel } from "../models/interfaces"
+import { PlayerModel, StatisticsModel } from "../models/interfaces"
 import * as playerRepo from "../repositories/player-repository"
 import * as httpResponse from "../utils/http-helper"
 
@@ -20,9 +20,9 @@ export const getPlayerByIdService = async (id: number) => {
     let response = null
 
     if (data) {
-        response = httpResponse.OK(data)
+        response = await httpResponse.OK(data)
     } else {
-        response = httpResponse.NO_CONTENT()
+        response = await httpResponse.NO_CONTENT()
     }
 
     return response
@@ -34,10 +34,10 @@ export const createPlayerService = async (player: PlayerModel) => {
     if (Object.keys(player).length !== 0) {
         console.log('deu bom');
         await playerRepo.insertPlayer(player)
-        response = httpResponse.CREATED()
+        response = await httpResponse.CREATED()
     } else {
-        console.log('bad');
-        response = httpResponse.BAD_REQUEST()
+        console.log(player);
+        response = await httpResponse.BAD_REQUEST()
     }
 
     return response
@@ -46,8 +46,22 @@ export const createPlayerService = async (player: PlayerModel) => {
 export const deletePlayerService = async (id: number) => {
     let response = null
 
-    await playerRepo.deletePlayer(id)
-    response = httpResponse.OK({ message: 'deleted' })
+    await playerRepo.deletePlayerById(id)
+    response = await httpResponse.OK({ message: 'deleted' })
     
+    return response
+}
+
+export const updatePlayerService = async (id: number, statistics: StatisticsModel) => {
+    let response = null
+
+    const data = await playerRepo.updatePlayerById(id, statistics)
+    
+    if (Object.keys(data).length === 0) {
+        response = await httpResponse.BAD_REQUEST()
+    } else {
+        response = await httpResponse.OK({ message: 'updated' })
+    }
+
     return response
 }
