@@ -1,5 +1,5 @@
 import { PlayerModel, StatisticsModel } from "../models/interfaces"
-import playersJson from './players.json'
+import * as playersJson from './players.json'
 
 const database: PlayerModel[] = playersJson
 
@@ -22,7 +22,10 @@ const deletePlayerById = async (id: number) => {
 
     if (playerIndex !== -1) {
         database.splice(playerIndex, 1)
+        return true
     }
+
+    return false
 }
 
 const updatePlayerById = async (id: number, statistics: StatisticsModel): Promise<PlayerModel> => {

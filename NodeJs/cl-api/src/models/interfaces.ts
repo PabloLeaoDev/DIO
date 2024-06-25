@@ -22,6 +22,11 @@ export interface PlayerModel {
     }
 }
 
+export interface ClubModel {
+    id: number,
+    name: string
+}
+
 export interface HttpResponse {
     statusCode: number,
     body: any

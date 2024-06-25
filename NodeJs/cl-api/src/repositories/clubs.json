@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "name": "Real Madrid"
+    },
+    {
+        "id": 2,
+        "name": "Barcelona"
+    },
+    {
+        "id": 3,
+        "name": "Manchester City"
+    },
+    {
+        "id": 4,
+        "name": "Bayern Munich"
+    },
+    {
+        "id": 5,
+        "name": "Paris Saint-Germain"
+    },
+    {
+        "id": 6,
+        "name": "Liverpool"
+    },
+    {
+        "id": 7,
+        "name": "Chelsea"
+    },
+    {
+        "id": 8,
+        "name": "Juventus"
+    },
+    {
+        "id": 9,
+        "name": "Atletico Madrid"
+    },
+    {
+        "id": 10,
+        "name": "Inter Milan"
+    },
+    {
+        "id": 11,
+        "name": "AC Milan"
+    },
+    {
+        "id": 12,
+        "name": "Borussia Dortmund"
+    },
+    {
+        "id": 13,
+        "name": "Ajax"
+    },
+    {
+        "id": 14,
+        "name": "RB Leipzig"
+    },
+    {
+        "id": 15,
+        "name": "Porto"
+    },
+    {
+        "id": 16,
+        "name": "Benfica"
+    },
+    {
+        "id": 17,
+        "name": "Shakhtar Donetsk"
+    },
+    {
+        "id": 18,
+        "name": "Sevilla"
+    },
+    {
+        "id": 19,
+        "name": "Napoli"
+    },
+    {
+        "id": 20,
+        "name": "Sporting CP"
+    },
+    {
+        "id": 21,
+        "name": "Atalanta"
+    },
+    {
+        "id": 22,
+        "name": "Lazio"
+    },
+    {
+        "id": 23,
+        "name": "Zenit Saint Petersburg"
+    },
+    {
+        "id": 24,
+        "name": "Club Brugge"
+    },
+    {
+        "id": 25,
+        "name": "Villarreal"
+    },
+    {
+        "id": 26,
+        "name": "Red Bull Salzburg"
+    },
+    {
+        "id": 27,
+        "name": "Marseille"
+    },
+    {
+        "id": 28,
+        "name": "Olympiacos"
+    },
+    {
+        "id": 29,
+        "name": "Besiktas"
+    },
+    {
+        "id": 30,
+        "name": "Dynamo Kyiv"
+    },
+    {
+        "id": 31,
+        "name": "Ferencvaros"
+    },
+    {
+        "id": 32,
+        "name": "Lokomotiv Moscow"
+    }
+]
