@@ -3,18 +3,6 @@
 ### Tecnologias
 - Typescript
 
-### Como rodar o projeto
-
-1 - Clone o repositório
-
-2 - Instale as dependeências
-    
-    npm install
-
-3 - Execute o projeto
-
-    npm run dev
-
 #### Desafios
 [x] Implementar os métodos de depósito (deposit) e saque (withdraw) na classe DioAccount
   - Os valores dos saldos devem ser alterados, de acordo com o valor informado para depósito
