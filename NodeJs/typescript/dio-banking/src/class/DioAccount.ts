@@ -1,46 +1,64 @@
 export abstract class DioAccount {
-    private name: string;
-    private status: boolean = false;
+    private readonly name: string;
+    private status: boolean;
     private readonly accountNumber: number;
-    balance: number = 0;
+    private balance: number = 0;
 
-    constructor (name: string, accountNumber: number) {
+    constructor (name: string, accountNumber: number, status: boolean) {
         this.name = name;
         this.accountNumber = accountNumber;
+        this.status = status;
     }
 
-    // setter
-    setName = (name: string): void => {
-        this.name = name;
-        console.log('Nome alterado com sucesso!');
-    }
-
-    // getter
     getName = (): string => {
         return this.name;
     }
 
-    deposit = (): void => {
+    setStatus = (status: boolean): void => {
+        this.status = status;
+        console.log('Account status has been changed successfully!');
+    }
+
+    setBalance = (newBalance: number): void => {
+        this.balance = newBalance;
+    }
+
+    getBalance = (): number => {
+        return this.balance;
+    }
+
+    setBalanceOtherAccount = (extraValue: number): void => {
+        this.balance += extraValue + 10;
+    }
+
+    deposit = (depositValue: number): void => {
         if (this.validateStatus()) {
+            this.balance += depositValue;
             console.log('You deposited!');
+        }
+    }
+
+    withdraw = (withdrawValue: number): void => {
+        if (withdrawValue <= this.balance && this.validateStatus()) {
+            this.balance -= withdrawValue;
+        } else {
+            throw new Error('Insufficient Balance!');    
         }
     }
 
     remove = (): void => {
         console.log('You removed!');
     }
-    
-    getBalance = (): void => {
-        console.log(this.balance);
-    }
 
-    private validateStatus = (): boolean => {
+    validateStatus = (): boolean => {
         if (this.status) {
             return this.status;
         }
-        throw new Error('Conta Inválida');
+        throw new Error('Invalid Account!');
     }
 }
+
+// getters e setters estão sendo implementados.
 
 // a classe abstrata foi criada para reaproveitar código, já que com ela não se pode fazer uma instância, apenas criar atributos/elementos que serão compartilhados com outras classes que herdarão os mesmos. 
 
