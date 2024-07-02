@@ -1,6 +1,4 @@
 import { DioAccount } from "./DioAccount";
-// A classe PeopleAccount herdou os atributos/elementos de Account
-
 export class PeopleAccount extends DioAccount {
     private doc_id: number;
 
