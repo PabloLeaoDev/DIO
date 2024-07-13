@@ -7,7 +7,7 @@ const Box = styled.div`
 
 function App() {
   return (
-    // o "React.Fragment" (<></>) é útil para não ferir o principio de retornar apenas um elemento, então para não termos que criar o elemento que será lido pelo servidor, essa propriedade agrupa o que iremos retornar sem ser lido, ou seja, não afeta a peformance.
+    // o "React.Fragment" (<></>) é útil para não ferir o princípio de retornar apenas um elemento, então para não termos que criar o elemento que será lido pelo servidor, essa propriedade agrupa o que iremos retornar sem ser lido, ou seja, não afeta a peformance.
     <Layout>
       <Box>
         <h1>Faça Login</h1>
