@@ -1,9 +1,13 @@
 import './header.css';
 
-export const Header = () => {
+interface Text {
+    children: string;
+}
+
+export const Header = ({children}: Text) => {
     return (
         <div className='header'>
-            Dio Bank
+            {children}
         </div>
     )
 }
