@@ -1,0 +1,23 @@
+.container {
+    background-color: white;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.container h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.container .input {
+    margin: 10px 0px;
+    width: 95%;
+}
+
+.btn {
+    width: 95%;
+    margin-top: 10px;
+}

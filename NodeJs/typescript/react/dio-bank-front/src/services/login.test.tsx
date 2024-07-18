@@ -1,10 +1,24 @@
 import { login } from "./login";
-
 describe('login', () => {
     const mockAlert = jest.fn();
-    window.alert = mockAlert;
-    it('Deve exibir um alert com boas-vindas', () => {
+    const mockPrompt = jest.fn();
+
+    beforeAll(() => {
+        window.alert = mockAlert;
+        window.prompt = mockPrompt;
+    });
+
+    beforeEach(() => {
+        mockAlert.mockClear();
+        mockPrompt.mockClear();
+    });
+
+    it('Deve exibir um alert com boas-vindas <nome-do-usuário>', () => {
+        const username = 'test-user';
+        mockPrompt.mockReturnValueOnce(username);
+
         login();
-        expect(mockAlert).toBeCalled();
-    })
-})
+
+        expect(mockAlert).toBeCalledWith(`Boas-vindas, ${username}!`);
+    });
+});

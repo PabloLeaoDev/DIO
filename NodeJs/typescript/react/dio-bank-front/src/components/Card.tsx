@@ -7,23 +7,28 @@ import {
     Button
 } from '@chakra-ui/react'
 import { login } from '../services/login';
+import './card.css';
 
 export const Card = () => {
     return (
         <ChakraProvider>
-            <Box minHeight='100vh' backgroundColor='blue' padding='25px'>
+            <Box minHeight='100vh' backgroundColor='#319795' padding='25px'>
                 <Header>
                     Fomulário
                 </Header>
-                <Box backgroundColor='white' borderRadius='10px' padding='10px'>
+                <Box className='container'>
                     <Center>
-                        <h1>Faça Login</h1>
+                        <h1>Login</h1>
                     </Center>
-                    <Input placeholder='email' />
-                    <Input placeholder='password' />
                     <Center>
-                        <Button colorScheme='teal' size='sm' marginTop='10px' width='100%' onClick={login}>
-                            Button
+                        <Input placeholder='email' className='input' />
+                    </Center>
+                    <Center>
+                    <Input placeholder='password' className='input' />
+                    </Center>
+                    <Center>
+                        <Button colorScheme='teal' size='sm' className='btn' onClick={login}>
+                            Entrar
                         </Button>
                     </Center>
                 </Box>    
