@@ -36,6 +36,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
+    transition: .25s;
 }
 
 .acordeon.open .trigger::after {
@@ -44,6 +45,9 @@
 
 .acordeon.open .content {
     display: block;
+    opacity: 1;
+    height: auto;
+    padding: 0 0 1.5rem 2rem;
 }
 
 .acordeon .trigger:hover {
@@ -51,5 +55,8 @@
 }
 
 .acordeon .content {
-    display: none;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
 }

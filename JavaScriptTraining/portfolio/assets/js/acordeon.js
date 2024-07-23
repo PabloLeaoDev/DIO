@@ -1,11 +1,13 @@
-let acordeon = document.querySelector('.acordeon')
+let acordeons = document.querySelectorAll('.acordeon');
 
-acordeon.addEventListener('click', (e) => {
-    const isOpen = acordeon.classList.contains('open')
-    
-    if (isOpen) {
-        acordeon.classList.remove('open')
-    } else {
-        acordeon.classList.add('open')
-    }
-})
+acordeons.forEach(acordeon => {
+    acordeon.addEventListener('click', (e) => {
+        const isOpen = acordeon.classList.contains('open');
+        
+        if (isOpen) {
+            acordeon.classList.remove('open');
+        } else {
+            acordeon.classList.add('open');
+        }
+    });
+});
