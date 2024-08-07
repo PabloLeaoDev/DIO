@@ -20,6 +20,21 @@ function updateProfileInfo(profileData) {
     const email = document.querySelector('#profile_email');
     email.innerHTML = profileData.email;
     email.href = `mailto: ${profileData.email}`;
+
+    const soft1 = document.querySelector('#soft1');
+    soft1.innerHTML = profileData.skills.softSkills[0];
+
+    const soft2 = document.querySelector('#soft2');
+    soft2.innerHTML = profileData.skills.softSkills[1];
+
+    const soft3 = document.querySelector('#soft3');
+    soft3.innerHTML = profileData.skills.softSkills[2];
+
+    const soft4 = document.querySelector('#soft4');
+    soft4.innerHTML = profileData.skills.softSkills[3];
+    
+    const soft5 = document.querySelector('#soft5');
+    soft5.innerHTML = profileData.skills.softSkills[4];
 }
 
 (async () => {
