@@ -16,10 +16,6 @@
         "logo": "./assets/img/icons/python.svg"
       },
       {
-        "name": "Angular",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/angular.png"
-      },
-      {
         "name": "Java",
         "logo": "./assets/img/icons/java.svg"
       },
