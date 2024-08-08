@@ -35,6 +35,35 @@ function updateProfileInfo(profileData) {
     
     const soft5 = document.querySelector('#soft5');
     soft5.innerHTML = profileData.skills.softSkills[4];
+
+    const hard1 = document.querySelector('#hard1');
+    hard1.src = profileData.skills.hardSkills[0].logo;
+    hard1.alt = profileData.skills.hardSkills[0].name;
+    hard1.title = profileData.skills.hardSkills[0].name;
+
+    const hard2 = document.querySelector('#hard2');
+    hard2.src = profileData.skills.hardSkills[1].logo;
+    hard2.alt = profileData.skills.hardSkills[1].name;
+    hard2.title = profileData.skills.hardSkills[1].name;
+    
+    const hard3 = document.querySelector('#hard3');
+    hard3.src = profileData.skills.hardSkills[2].logo;
+    hard3.alt = profileData.skills.hardSkills[2].name;
+    hard3.title = profileData.skills.hardSkills[2].name;
+
+    const hard4 = document.querySelector('#hard4');
+    hard4.src = profileData.skills.hardSkills[3].logo;
+    hard4.alt = profileData.skills.hardSkills[3].name;
+    hard4.title = profileData.skills.hardSkills[3].name;
+
+    const lang1 = document.querySelector('#lang1');
+    lang1.innerHTML = profileData.languages[0];
+
+    const lang2 = document.querySelector('#lang2');
+    lang2.innerHTML = profileData.languages[1];
+    
+    const lang3 = document.querySelector('#lang3');
+    lang3.innerHTML = profileData.languages[2];
 }
 
 (async () => {
